@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Checkbox, Dialog, Flex, Heading, Text, TextField } from "@radix-ui/themes";
+import { Box, Button, Checkbox, Flex, Heading, Text, TextField } from "@radix-ui/themes";
 import { useNavigate } from "react-router-dom";
 import "../style.css";
 import { useRecoilState } from "recoil";
@@ -53,7 +53,7 @@ const EmployerRegister = () => {
 
                 <Flex direction="column" className="register-container">
                     <Heading as="h1" m="0" mb="3">
-                      Register as an employer
+                        Register as an employer
                     </Heading>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
