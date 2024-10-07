@@ -5,13 +5,13 @@ import { protectedRoutes } from "./protected-routes";
 
 function getPublicRoutes() {
     return publicRoutes.map((route) => {
-        return <Route key={route.path} path={route.path} element={route.elements} />;
+        return <Route key={route.path} path={route.path} element={route.element} />;
     });
 }
 
-function getProtectedRoutes() {
+function getProtectedRoutes(type) {
     return protectedRoutes.map((route) => {
-        return <Route key={route.path} path={route.path} element={route.elements} />;
+        if (route.category == type) return <Route key={route.path} path={route.path} element={route.element} />;
     });
 }
 
