@@ -1,1 +1,86 @@
 
+/* employer-register */
+#employer-register {
+    min-height: 85vh;
+}
+
+#employer-register .register-container {
+    border-radius: 10px;
+    border: 3px solid var(--gray-400);
+    padding: 30px;
+    width: 500px;
+}
+
+#employer-register .register-container h1 {
+    font-size: 26px;
+}
+
+#employer-register .register-container p {
+    font-size: 20px;
+}
+
+#employer-register .register-container1 label {
+    font-size: 14px;
+}
+
+#employer-register .register-container button {
+    padding: 20px 0px;
+}
+
+#employer-register .register-container .error-message {
+    font-size: 15px;
+    color: red;
+}
+
+/* forgot-password-dialog */
+#forgot-password-dialog h1 {
+    font-size: 26px;
+}
+
+/* applicant-register */
+#applicant-register {
+    min-height: 100vh;
+    padding: 50px 0px
+
+}
+
+#applicant-register .register-container {
+    border-radius: 10px;
+    border: 3px solid var(--gray-400);
+    padding: 30px;
+    width: 500px;
+}
+
+#applicant-register .register-container h1 {
+    font-size: 26px;
+}
+
+#applicant-register .register-container p {
+    font-size: 20px;
+}
+
+#applicant-register .register-container label {
+    font-size: 14px;
+}
+
+#applicant-register .register-container button {
+    padding: 20px 0px;
+}
+
+#applicant-register .register-container .register-with-button {
+    position: relative;
+    background: white;
+    color: black;
+    outline: 3px solid black;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+#applicant-register .register-container .register-with-button:hover {
+    background: black;
+    color: white;
+}
+
+#applicant-register .register-container .error-message {
+    font-size: 15px;
+    color: red;
+}
