@@ -1,14 +1,15 @@
-import { Flex } from "@radix-ui/themes";
 import React from "react";
 import "./style.css";
+import { useRecoilState } from "recoil";
+import { userRoleState } from "../../../../_common/state";
+import EmployerRegister from "./components/employer-register";
+import ApplicantRegister from "./components/applicant-register";
 
 const Register = () => {
-    return (
-        <Flex id="register">
-            <Flex justify="between" align="center">
-            </Flex>
-        </Flex>
-    );
+    const [currentUserRole] = useRecoilState(userRoleState);
+
+    if (currentUserRole == "applicant") return <ApplicantRegister />;
+    if (currentUserRole == "employer") return <EmployerRegister />;
 };
 
 export default Register;

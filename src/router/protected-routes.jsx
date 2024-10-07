@@ -16,12 +16,6 @@ export const protectedRoutes = [
     },
     {
         category: "employer",
-        name: "registration",
-        path: "employer/registration",
-        element: withLazyComponent(React.lazy(() => import("../pages/employer/employer-registration/view"))),
-    },
-    {
-        category: "employer",
         name: "dashboard",
         path: "employer/dashboard",
         element: withLazyComponent(React.lazy(() => import("../pages/employer/employer-dashboard/view"))),
