@@ -4,8 +4,8 @@ import { withLazyComponent } from "./with-lazy-component";
 export const protectedRoutes = [
     {
         category: "applicant",
-        name: "applicant-profile",
-        path: "applicant/applicant-profile",
+        name: "profile",
+        path: "applicant/profile",
         element: withLazyComponent(React.lazy(() => import("../pages/applicants/applicant-profile/view"))),
     },
     {
