@@ -13,10 +13,7 @@ export interface IJob {
         companySize: string;
         primaryLocation: string;
         spcialities: string;
-        story: `
-        Health Lane Family Pharmacy is a growing chain of pharmacy with more than 30 years of experience! We currently have more than 200 outlets in Klang Valley, Negeri Sembilan, Melaka, Johor, Pahang, Perak, Penang, Sarawak and still expanding.
-We believe “GREAT HEALTH BEGINS HERE”, our goal is to establish a long term relationship with our customers, treating them like our family by providing caring advice and recommending wholesome solutions to help them achieve great health.
-In order to achieve our goal, we employ a dedicated team of licensed and experienced pharmacists, well trained nutritionists, dietitians and health advisors to provide the best service and consultation to our customers.`;
+        story: string;
     };
     reviews: {
         feedbacks: number[];
