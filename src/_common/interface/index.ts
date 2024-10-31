@@ -5,23 +5,39 @@ export interface IUser {
     password: string;
 }
 
-export interface IJob {
-    jobId: number;
+export interface ICompany {
+    companyId: number;
     name: string;
+    img: {
+        icon: string;
+        background: string;
+    };
     about: {
         industry: string;
         companySize: string;
         primaryLocation: string;
-        spcialities: string;
         story: string;
     };
     reviews: {
-        feedbacks: number[];
+        feedbacksRating: number[];
         recommended: {
             value: number;
             reason: string;
-        };
+        }[];
     };
+}
+
+export interface IJob {
+    jobId: number;
+    companyId: number;
+    position: string;
+    salary: string;
+    type: "Contract/Temp" | "Full time";
+    postedFrom: number;
+    objectives: string;
+    responsibilities: string[];
+    requirements: string[];
+    employerQuestions: string[];
 }
 
 export interface IReview {
