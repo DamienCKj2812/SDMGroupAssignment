@@ -1,0 +1,75 @@
+/* employer-login */
+#employer-login {
+    min-height: 85vh;
+}
+
+#employer-login .login-container {
+    border-radius: 10px;
+    border: 3px solid var(--gray-400);
+    padding: 30px;
+    width: 500px;
+}
+
+#employer-login .login-container h1 {
+    font-size: 26px;
+}
+
+#employer-login .login-container p {
+    font-size: 20px;
+}
+
+#employer-login .login-container button {
+    padding: 20px 0px;
+}
+
+#employer-login .login-container .error-message {
+    font-size: 15px;
+    color: red;
+}
+
+/* forgot-password-dialog */
+#forgot-password-dialog h1 {
+    font-size: 26px;
+}
+
+/* applicant-login */
+#applicant-login {
+    min-height: 100vh;
+}
+
+#applicant-login .login-container {
+    border-radius: 10px;
+    border: 3px solid var(--gray-400);
+    padding: 30px;
+    width: 500px;
+}
+
+#applicant-login .login-container h1 {
+    font-size: 26px;
+}
+
+#applicant-login .login-container p {
+    font-size: 20px;
+}
+
+#applicant-login .login-container button {
+    padding: 20px 0px;
+}
+
+#applicant-login .login-container .login-with-button {
+    position: relative;
+    background: white;
+    color: black;
+    outline: 3px solid black;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+#applicant-login .login-container .login-with-button:hover {
+    background: black;
+    color: white;
+}
+
+#applicant-login .login-container .error-message {
+    font-size: 15px;
+    color: red;
+}

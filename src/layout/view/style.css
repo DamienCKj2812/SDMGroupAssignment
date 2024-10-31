@@ -1,0 +1,43 @@
+#layout-header {
+    position: sticky;
+    background: #ffffff;
+    width: 100vw;
+    height: 60px;
+    z-index: 9999;
+    padding: 20px 70px;
+    box-shadow: var(--elevation-low);
+    font-size: 18px;
+}
+
+#layout-header button {
+    cursor: pointer;
+}
+
+#layout-header .page-options .option {
+    cursor: pointer;
+    padding: 2px;
+    color: var(--interactive-default);
+}
+
+#layout-header .page-options .option.selected {
+    border-bottom: 2px solid var(--interactive-active);
+    color: var(--interactive-active);
+}
+
+#user-option-popover {
+    padding: 0px;
+}
+
+#user-option-popover .option {
+    cursor: pointer;
+    padding: 10px;
+}
+
+#user-option-popover .option.danger {
+    color: red;
+}
+
+#user-option-popover .option.danger:hover {
+    color: white;
+    background: red;
+}
