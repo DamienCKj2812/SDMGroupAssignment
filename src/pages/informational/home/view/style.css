@@ -1,0 +1,151 @@
+.let{
+    margin-top:-10px;
+}
+
+#home-view .panel {
+    background-color:#e60278;
+    padding: 20px;
+    color: white;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+   
+
+  }
+
+#home-view .panel .text1{
+    font-weight:bold;
+    font-size:25px;
+  }
+
+#home-view .panel2 {
+    background-image: url('src/_common/assets/home-backgrounds.jpg');  /* Path to your image */
+    background-size: cover;      /* Scale image to cover the entire div */
+    background-position: center 40% ; /* Center the image within the div */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    width: 100%;                 /* Adjust width as needed */
+    height: 750px;   
+    padding-top:75px;          /* Adjust height as needed */      /* Optional: rounded corners */
+}
+#home-view .panel2 a{
+    color:white;
+    text-decoration:none;
+}
+
+#home-view .panel2 .insidepanel2 {
+    margin-top:30px;
+    background-color: white;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:30px;
+    margin-left:300px;
+    width: 35%;            /* Adjust the width as needed */
+    height: 400px;           /* Adjust the height as needed */
+    border-radius: 10px;    /* Optional: rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+       /* Centers text inside the container */
+}
+
+#home-view .panel2 .insidepanel2 .job-ads{
+    background-color:#f9ebfd;
+    padding:10px;
+
+} 
+
+#home-view .panel2 .insidepanel2 h1{
+    font-size:45px;
+   margin-top:10px;
+   line-height: 1; /* Adjust this value to reduce the gap between lines */
+
+}
+
+#home-view .panel2 .insidepanel2 button{
+    background-color:#e60278;
+}
+
+/* style.css */
+#home-view .custom-textfield {
+    width: 100%; /* Set the desired width */
+    max-width: 100%; /* Ensures responsiveness */
+}
+
+#home-view .panel2 .insidepanel2 a{
+    color:blue;
+    text-decoration:none;
+}
+
+
+
+#home-view .panel3 h1{
+    text-align:center;
+}
+
+#home-view .panel3 .words-container{
+    text-align: center;
+    margin: 0 auto; /* Center-aligns the container */
+    gap: 2%; /* Adjust gap as needed */
+    width: 60%; /* Center and control width */
+    display: flex;
+    justify-content: center;
+    margin-top:60px;
+    
+}
+
+#home-view .panel3 .middle-button{
+    margin: 0 auto; /* Center-aligns the container */
+    width: 60%; /* Center and control width */
+    display: flex;
+    justify-content: center;
+    margin-top:60px;
+    width:13%;
+    background-color:#e60278;
+    padding:20px;
+    font-size:20px;
+}
+
+#home-view .panel3  .header1{
+        font-size:43px;
+}
+
+#home-view .panel3 .words-container h2{
+    font-size:26px;
+}
+
+#home-view .panel3 .words-container p{
+    font-size:;
+}
+
+#home-view .panel3 .line{
+    margin-top:80px;
+    margin-left:15%;
+    margin-right:15%;
+    transparent:8px;
+    margin-bottom:80px;
+}
+
+#home-view .panel3 .words-container2 .wrap{
+    background-color:#feeffa;
+    padding-left:40px;
+    padding-right:40px;
+    border-radius:10px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#home-view .panel3 .words-container2{
+    text-align: center;
+    margin: 0 auto; /* Center-aligns the container */
+    gap: 2%; /* Adjust gap as needed */
+    width: 70%; /* Center and control width */
+    display: flex;
+    justify-content: center;
+    margin-top:60px;
+}
+
+#home-view .panel3 .words-container2 h2{
+    font-size:26px;
+}
+  
+#home-view .panel3 .words-container2 p{
+    font-size:18px;
+}
