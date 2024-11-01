@@ -33,6 +33,11 @@ button {
     cursor: pointer;
 }
 
+.rt-TooltipText {
+    font-size: 18px !important;
+    padding:10px;
+}
+
 .ToastViewport {
     --viewport-padding: 25px;
     position: fixed;

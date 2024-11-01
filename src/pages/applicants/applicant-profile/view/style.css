@@ -2,6 +2,42 @@
     margin: 0px 150px;
 }
 
+#applicant-profile .details-container h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#applicant-profile .details-container .input-container {
+    margin-top: 20px;
+    border: 3px solid var(--border-black-400);
+    border-radius: 9px;
+    padding: 20px;
+    max-width: 700px;
+}
+
+#applicant-profile .details-container .input-container p {
+    font-size: 19px;
+}
+
+#applicant-profile .details-container .input-container h1 {
+    font-size: 24px;
+}
+
+#applicant-profile .details-container .input-container label {
+    color: var(--gray-700);
+}
+
+#applicant-profile .details-container .input-container .edit-container {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    height: fit-content;
+}
+
+#applicant-profile .details-container .input-container .edit-container:hover {
+    background: var(--gray-400);
+}
+
 /* applicant-profile-banner */
 #applicant-profile-banner {
     background-size: cover;
@@ -34,14 +70,335 @@
 
 #edit-profile-setting-dialog {
     height: 100vh;
-    max-width: 500px
+    max-width: 500px;
 }
 
-#edit-profile-setting-dialog h1{
-    font-size: 30px
+#edit-profile-setting-dialog button {
+    padding: 20px 30px;
 }
 
-#edit-profile-setting-dialog button{
-    padding: 20px 30px
+/* applicant-personal-summary */
+
+#applicant-personal-summary-dialog.rt-BaseDialogContent {
+    margin: 0;
+    margin-left: auto;
 }
 
+#applicant-personal-summary-dialog {
+    height: 100vh;
+    max-width: 500px;
+}
+
+#applicant-personal-summary-dialog h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#applicant-personal-summary-dialog strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#applicant-personal-summary-dialog button {
+    padding: 20px 30px;
+}
+
+#applicant-personal-summary-dialog textarea {
+    width: 100% !important;
+    border-radius: 8px;
+    padding: 10px;
+    height: 200px;
+}
+
+/* applicant-career-history */
+#applicant-career-history-dialog.rt-BaseDialogContent {
+    margin: 0;
+    margin-left: auto;
+}
+
+#applicant-career-history-dialog {
+    height: 100vh;
+    max-width: 500px;
+}
+
+#applicant-career-history-dialog h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#applicant-career-history-dialog label {
+    color: var(--gray-700);
+}
+
+#applicant-career-history-dialog strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#applicant-career-history-dialog .rt-BaseButton {
+    padding: 20px 30px;
+}
+
+#applicant-career-history-dialog .rt-SelectTrigger {
+    width: 80px;
+}
+
+#applicant-career-history-dialog textarea {
+    width: 100% !important;
+    border-radius: 8px;
+    padding: 10px;
+    height: 200px;
+}
+
+/* applicant-education */
+#applicant-education-dialog.rt-BaseDialogContent {
+    margin: 0;
+    margin-left: auto;
+}
+
+#applicant-education-dialog {
+    height: 100vh;
+    max-width: 500px;
+}
+
+#applicant-education-dialog h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#applicant-education-dialog label {
+    color: var(--gray-700);
+}
+
+#applicant-education-dialog strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#applicant-education-dialog .rt-BaseButton {
+    padding: 20px 30px;
+}
+
+#applicant-education-dialog .rt-SelectTrigger {
+    width: 80px;
+}
+
+#applicant-education-dialog textarea {
+    width: 100% !important;
+    border-radius: 8px;
+    padding: 10px;
+    height: 200px;
+}
+
+/* applicant-license-and-certificants */
+#applicant-license-and-certificants-dialog.rt-BaseDialogContent {
+    margin: 0;
+    margin-left: auto;
+}
+
+#applicant-license-and-certificants-dialog {
+    height: 100vh;
+    max-width: 500px;
+}
+
+#applicant-license-and-certificants-dialog h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#applicant-license-and-certificants-dialog label {
+    color: var(--gray-700);
+}
+
+#applicant-license-and-certificants-dialog strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#applicant-license-and-certificants-dialog .rt-BaseButton {
+    padding: 20px 30px;
+}
+
+#applicant-license-and-certificants-dialog .rt-SelectTrigger {
+    width: 80px;
+}
+
+#applicant-license-and-certificants-dialog textarea {
+    width: 100% !important;
+    border-radius: 8px;
+    padding: 10px;
+    height: 200px;
+}
+
+/* applicant-skills */
+#applicant-skills .added-skill-container {
+    padding: 5px 15px;
+    border-radius: 30px;
+    background: var(--gray-300);
+}
+
+#applicant-skills-dialog.rt-BaseDialogContent {
+    margin: 0;
+    margin-left: auto;
+}
+
+#applicant-skills-dialog .rt-TextFieldRoot {
+    height: 40px;
+    width: 100%;
+}
+
+#applicant-skills-dialog {
+    height: 100vh;
+    max-width: 500px;
+}
+
+#applicant-skills-dialog .suggested-skill-container {
+    padding: 5px 15px;
+    border-radius: 30px;
+    background: var(--blue-300);
+    cursor: pointer;
+    color: var(--blue-700);
+}
+
+#applicant-skills-dialog .added-skill-container {
+    padding: 5px 15px;
+    border-radius: 30px;
+    background: var(--gray-300);
+    cursor: pointer;
+}
+
+#applicant-skills-dialog h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#applicant-skills-dialog label {
+    color: var(--gray-700);
+}
+
+#applicant-skills-dialog strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#applicant-skills-dialog .rt-BaseButton {
+    padding: 20px 30px;
+}
+
+#applicant-skills-dialog .rt-SelectTrigger {
+    width: 80px;
+}
+
+#applicant-skills-dialog textarea {
+    width: 100% !important;
+    border-radius: 8px;
+    padding: 10px;
+    height: 200px;
+}
+
+/* applicant-languages */
+#applicant-languages .added-language-container {
+    padding: 5px 15px;
+    border-radius: 30px;
+    background: var(--gray-300);
+}
+
+#applicant-languages-dialog.rt-BaseDialogContent {
+    margin: 0;
+    margin-left: auto;
+}
+
+#applicant-languages-dialog .rt-TextFieldRoot {
+    height: 40px;
+    width: 100%;
+}
+
+#applicant-languages-dialog {
+    height: 100vh;
+    max-width: 500px;
+}
+
+#applicant-languages-dialog .suggested-language-container {
+    padding: 5px 15px;
+    border-radius: 30px;
+    background: var(--blue-300);
+    cursor: pointer;
+    color: var(--blue-700);
+}
+
+#applicant-languages-dialog .added-language-container {
+    padding: 5px 15px;
+    border-radius: 30px;
+    background: var(--gray-300);
+    cursor: pointer;
+}
+
+#applicant-languages-dialog h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#applicant-languages-dialog label {
+    color: var(--gray-700);
+}
+
+#applicant-languages-dialog strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#applicant-languages-dialog .rt-BaseButton {
+    padding: 20px 30px;
+}
+
+#applicant-languages-dialog .rt-SelectTrigger {
+    width: 80px;
+}
+
+#applicant-languages-dialog textarea {
+    width: 100% !important;
+    border-radius: 8px;
+    padding: 10px;
+    height: 200px;
+}
+
+/* applicant-resume */
+
+#applicant-resume-dialog.rt-BaseDialogContent {
+    margin: 0;
+    margin-left: auto;
+}
+
+#applicant-resume-dialog .rt-TextFieldRoot {
+    height: 40px;
+    width: 100%;
+}
+
+#applicant-resume-dialog {
+    height: 100vh;
+    max-width: 500px;
+}
+
+#applicant-resume-dialog h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#applicant-resume-dialog label {
+    color: var(--gray-700);
+}
+
+#applicant-resume-dialog strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#applicant-resume-dialog .rt-BaseButton {
+    padding: 20px 30px;
+}
+
+#applicant-resume-dialog .add-resume-input-container {
+    border: 4px dashed var(--gray-500);
+    border-radius: 10px;
+    padding: 40px;
+}

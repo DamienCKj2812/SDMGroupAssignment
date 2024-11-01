@@ -19,18 +19,17 @@ export interface IApplicantSetting {
     role: {
         jobTitle: string;
         companyName: string;
-        started: string;
-        ended: string;
+        started: { month: string; year: string };
+        ended: { month: string; year: string };
         stillInRole: boolean;
         description: string;
     }[];
     education: {
         courseOrQualification: string;
         institution: string;
-        qualificationComplete: boolean;
         finished: string;
         courseHighlights: string;
-    } | null;
+    }[];
     license: {
         licenseName: string;
         issuingOrganisation: string;
@@ -38,14 +37,14 @@ export interface IApplicantSetting {
             month: string;
             year: string;
         };
-        exipiryDate: {
+        expiryDate: {
             month: string;
             year: string;
         };
         description: string;
-    } | null;
+    }[];
     skills: string[];
-    addLanguage: string;
+    languages: string[];
 }
 
 export interface ICompany {
