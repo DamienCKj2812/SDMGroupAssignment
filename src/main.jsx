@@ -6,12 +6,16 @@ import "./index.css";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import { RecoilRoot } from "recoil";
+import * as Toast from "@radix-ui/react-toast";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <RecoilRoot>
             <Theme>
-                <App />
+                <Toast.Provider>
+                    <App />
+                    <Toast.Viewport className="ToastViewport" />
+                </Toast.Provider>
             </Theme>
         </RecoilRoot>
     </React.StrictMode>
