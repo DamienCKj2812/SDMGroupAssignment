@@ -5,6 +5,49 @@ export interface IUser {
     password: string;
 }
 
+export interface IApplicantSetting {
+    userId: number;
+    personalDetails: {
+        firstName: string;
+        lastName: string;
+        homeLocation: string;
+        profileImage: string;
+        banner: string;
+        phoneNumber: string;
+    };
+    personalSummary: string | null;
+    role: {
+        jobTitle: string;
+        companyName: string;
+        started: string;
+        ended: string;
+        stillInRole: boolean;
+        description: string;
+    }[];
+    education: {
+        courseOrQualification: string;
+        institution: string;
+        qualificationComplete: boolean;
+        finished: string;
+        courseHighlights: string;
+    } | null;
+    license: {
+        licenseName: string;
+        issuingOrganisation: string;
+        issue: {
+            month: string;
+            year: string;
+        };
+        exipiryDate: {
+            month: string;
+            year: string;
+        };
+        description: string;
+    } | null;
+    skills: string[];
+    addLanguage: string;
+}
+
 export interface ICompany {
     companyId: number;
     name: string;

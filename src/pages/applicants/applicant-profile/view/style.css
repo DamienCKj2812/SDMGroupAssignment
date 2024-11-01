@@ -1,0 +1,47 @@
+#applicant-profile {
+    margin: 0px 150px;
+}
+
+/* applicant-profile-banner */
+#applicant-profile-banner {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 30px;
+    padding: 0px 150px;
+    color: white;
+}
+
+#applicant-profile-banner h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+#applicant-profile-banner svg {
+    height: 20px;
+    width: 20px;
+}
+
+#applicant-profile-banner button {
+    padding: 20px 30px;
+}
+
+/* edit-profile-setting */
+#edit-profile-setting-dialog.rt-BaseDialogContent {
+    margin: 0;
+    margin-left: auto;
+}
+
+#edit-profile-setting-dialog {
+    height: 100vh;
+    max-width: 500px
+}
+
+#edit-profile-setting-dialog h1{
+    font-size: 30px
+}
+
+#edit-profile-setting-dialog button{
+    padding: 20px 30px
+}
+

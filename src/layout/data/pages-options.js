@@ -20,7 +20,7 @@ export const pagesOptions = {
         {
             id: 2,
             label: "Profile",
-            path: "/applicant/applicant-profile",
+            path: "/applicant/profile",
         },
     ],
     employerGuest: [
