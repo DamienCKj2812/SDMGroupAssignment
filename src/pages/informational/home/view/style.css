@@ -144,6 +144,10 @@
     margin: 0px 120px;
 }
 
+#applicant-home-page .find-your-next-employer{
+    
+}
+
 #applicant-home-page .find-your-next-employer .embla {
     overflow: hidden;
 }
@@ -193,3 +197,128 @@
     background: black;
     color: white;
 }
+
+#applicant-home-page .search-panel{
+    background-color: #051a49;
+    width: calc(100% + 240px);  /* Expands to ignore outer margins */
+    height: 50%;
+    color: white;
+    margin-left: -120px;  /* Offset to the left */
+    margin-right: -120px; /* Offset to the right */
+    padding-top: 2%; 
+    padding-bottom:4%; 
+    padding-left:25%;
+    padding-right:25%;
+    font-size:22px;
+    
+    justify-content: center;
+}
+
+#applicant-home-page .search-panel button{
+    background-color:#e60278;
+    width: ;  /* Expands to ignore outer margins */
+    height:45px ;
+    color: white;
+    margin-left:;  /* Offset to the left */
+    margin-right:; /* Offset to the right */
+    padding: ; 
+
+}
+
+/* styles.css */
+#applicant-home-page .search-panel .custom-textfield {
+    width: 30%; /* Set your desired width */
+    height:45px;
+    background-color:white;
+    border-radius:10px;
+    color:white;
+}
+
+#applicant-home-page .search-panel  .custom-dropdown {
+    width: 30%; /* Set your desired width */
+    height:45px;
+    background-color:white;
+    border-radius:10px;
+    color:white;
+}
+
+#applicant-home-page .signin{
+    text-align: center;
+    margin: 0 auto; /* Center-aligns the container */
+    background-color:#f3f5f7;
+    width: 80%; /* Center and control width */
+    justify-content: center;
+    margin-top:40px;
+    padding:30px;
+    font-size:20px;
+    border-radius:10px;
+}
+
+
+#applicant-home-page .signin button{
+    width:25%;
+    background-color:#f3f5f7;
+    color:black;
+    border: 2px solid black;
+    margin:auto; /* Center-aligns the container */
+    justify-content: center;
+    padding:20px;
+    margin-bottom:30px;
+    margin-top:20px;
+    font-size:18px;
+    border-radius:10px;
+}
+
+#applicant-home-page .two-cards{
+}
+
+#applicant-home-page .two-cards .card {
+    background-color: #e60278;
+    background-image: url("src/_common/assets/handsomeguy.png");
+    background-size: contain; /* Ensures the image covers the entire card area */
+    background-position: 85% 20%; /* 75% from the left, 20% from the top */
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    height: 350px;
+    background-repeat: no-repeat; 
+    color:white;
+}
+
+#applicant-home-page .two-cards .card button{
+    background-color:white;
+    color:black;
+    width:25%;
+    font-size:15px;
+}
+
+#applicant-home-page .two-cards .card2 button{
+    background-color:#e60278;
+    color:white;
+    width:25%;
+    font-size:15px;
+}
+
+#applicant-home-page .two-cards .card2 {
+    background-color:#f3f5f7 ;
+    background-image: url("src/_common/assets/girl.png");
+    background-size: contain; /* Ensures the image covers the entire card area */
+    background-position: 75% 20%; /* 75% from the left, 20% from the top */
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    height: 350px;
+    background-repeat: no-repeat; 
+}
+
+
+#applicant-home-page .img-size{
+    height:120px;
+    margin-bottom:40px;
+}
+
+#applicant-home-page .quick-search{
+    justify-content: flex-start; /* or center / flex-end / space-between / space-around */
+    align-items: center; /* or flex-start / flex-end */
+}
+

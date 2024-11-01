@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Grid, Heading, Strong, Text } from "@radix-ui/themes";
+import { Box, Button, Flex, Grid, Heading, Strong, Text, TextField, DropdownMenu } from "@radix-ui/themes";
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { companyList } from "../../../../../_common/data/company-list";
@@ -20,8 +20,46 @@ const ApplicantHomePage = () => {
 
     return (
         <Flex id="applicant-home-page" direction="column" gap="9">
-            <Box>Sign in / register part</Box>
-
+            <Box className="search-panel">
+                <Flex justify="center" align="center" gap="">
+                    <h2>Enter keywords to find job</h2>
+                </Flex>
+                <Flex justify="center" align="center" gap="5" mt="3">
+<TextField.Root className="custom-textfield" placeholder="Enter Keyword" />
+                <DropdownMenu.Root className="custom-dropdown">
+          <DropdownMenu.Trigger asChild>
+            <Button className="trigger-button">Select Option</Button>
+          </DropdownMenu.Trigger>
+          <DropdownMenu.Content className="dropdown-content">
+            <DropdownMenu.Item className="dropdown-item" >
+              Option 1
+            </DropdownMenu.Item>
+            <DropdownMenu.Item className="dropdown-item" >
+              Option 2
+            </DropdownMenu.Item>
+            <DropdownMenu.Item className="dropdown-item" >
+              Option 3
+            </DropdownMenu.Item>
+          </DropdownMenu.Content>
+        </DropdownMenu.Root>
+        <TextField.Root  className="custom-textfield" placeholder="Enter City"/>
+        <Button>Seek</Button>
+                </Flex>
+                
+            </Box>
+            <Box className="signin">
+                    <Flex>
+                    <Button mt="5"  onClick={() => navigate("/login")}>
+                           Sign in
+                        </Button>
+                        <Button mt="5">
+                            Register
+                        </Button>
+                        
+                    </Flex>
+                    <Text>Sign in to manage your Profile, save searches and view your recommended jobs.</Text>
+                </Box>
+           
             <Flex direction="column" gap="6" className="find-your-next-employer">
                 <Box>
                     <Heading as="h1" m="0">
@@ -30,6 +68,7 @@ const ApplicantHomePage = () => {
                     <Text as="label">
                         Explore company profiles to find the right workplace for you. Learn about jobs, reviews, company culture, perks and benefits.
                     </Text>
+                   
                 </Box>
 
                 <Box className="embla" ref={emblaRef}>
@@ -73,9 +112,82 @@ const ApplicantHomePage = () => {
                 <Button onClick={() => navigate("/login")}>Log in to explore more</Button>
             </Flex>
 
-            <Box>Two Cards part</Box>
+            <Flex className="two-cards" gap="5">
+                    <Box className="card">
+                        <Box className="img-size">
+                            <img src=""></img>
+                        </Box>
 
-            <Box>Quick search part</Box>
+                        <h2>New job opportunities</h2>
+                        <Button>Find out more</Button>
+                    </Box>
+
+                    <Box className="card2">
+                        <Box className="img-size">
+                            <img src=""></img>
+                        </Box>
+                        <h2>Great job here</h2>
+                        <Button>Best you find</Button>
+                    </Box>
+                </Flex>
+
+                <Box>
+            <Flex direction="column">
+                <Flex className="quick-search">
+                    <Box >Quick search part</Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                </Flex>
+                <Flex className="quick-search">
+                    <Box>Classifications</Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                </Flex>
+                <Flex className="quick-search">
+                    <Box>Major cities</Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                </Flex>
+                <Flex className="quick-search">
+                    <Box>Other</Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                    <Box ml="2"><a href="">Test</a></Box>
+                </Flex>
+            </Flex>
+                </Box>
+
 
             <Grid gap="4" justify="between" columns="4">
                 <Flex direction="column" gap="3">
@@ -127,3 +239,4 @@ const ApplicantHomePage = () => {
 };
 
 export default ApplicantHomePage;
+
