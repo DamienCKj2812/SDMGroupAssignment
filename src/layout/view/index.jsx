@@ -9,7 +9,9 @@ const MainLayout = () => {
         <Box>
             <LayoutHeader />
             <ScrollArea style={{ height: "calc(100vh - 60px)" }}>
-                <Outlet />
+                <Box my="7">
+                    <Outlet />
+                </Box>
             </ScrollArea>
         </Box>
     );
