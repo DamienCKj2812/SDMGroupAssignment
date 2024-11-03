@@ -22,6 +22,11 @@ export const pagesOptions = {
             label: "Profile",
             path: "/applicant/profile",
         },
+        {
+            id: 3,
+            label: "Meetings",
+            path: "/meeting/schedule-meeting",
+        },
     ],
     employerGuest: [
         {
@@ -43,8 +48,18 @@ export const pagesOptions = {
         },
         {
             id: 2,
-            label: "Registration",
-            path: "/employer/registration",
+            label: "Create Job AD",
+            path: "/employer/create-job-ad",
+        },
+        {
+            id: 3,
+            label: "Company Profile",
+            path: "/employer/company-profile",
+        },
+        {
+            id: 4,
+            label: "Meetings",
+            path: "/meeting/schedule-meeting",
         },
     ],
 };

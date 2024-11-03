@@ -32,4 +32,28 @@ export const protectedRoutes = [
         path: "employer/dashboard",
         element: withLazyComponent(React.lazy(() => import("../pages/employer/employer-dashboard/view"))),
     },
+    {
+        category: "employer",
+        name: "create-job-ad",
+        path: "employer/create-job-ad",
+        element: withLazyComponent(React.lazy(() => import("../pages/employer/create-job-ad/view"))),
+    },
+    {
+        category: "employer",
+        name: "company-profile",
+        path: "employer/company-profile",
+        element: withLazyComponent(React.lazy(() => import("../pages/employer/company-profile/view"))),
+    },
+    {
+        category: "meeting",
+        name: "meeting",
+        path: "meeting/meet/:meetingId",
+        element: withLazyComponent(React.lazy(() => import("../pages/_shared/meeting/view"))),
+    },
+    {
+        category: "meeting",
+        name: "schedule-meeting",
+        path: "meeting/schedule-meeting",
+        element: withLazyComponent(React.lazy(() => import("../pages/_shared/schedule-meeting/view"))),
+    },
 ];

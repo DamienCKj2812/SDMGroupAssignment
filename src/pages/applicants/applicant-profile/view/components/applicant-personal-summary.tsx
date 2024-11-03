@@ -4,6 +4,7 @@ import { Box, Button, Dialog, Flex, Grid, Heading, Strong, Text, TextField, Tool
 import React, { useState } from "react";
 import { applicantSetting } from "../../../../../_common/data/setting-list";
 import { useForm } from "react-hook-form";
+import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantPersonalSummary = () => {
     const { register, handleSubmit, watch, reset } = useForm({
@@ -74,6 +75,10 @@ const ApplicantPersonalSummary = () => {
                     </Dialog.Content>
                 </Dialog.Root>
             </Flex>
+
+            <ToastPopover openToast={openToast} setOpenToast={setOpenToast} status="success">
+                <Text>Success</Text>
+            </ToastPopover>
         </Box>
     );
 };
