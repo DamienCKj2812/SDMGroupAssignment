@@ -3,12 +3,12 @@ import React from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 
-const EmployerResgistration = () => {
+const CompanyProfile = () => {
     const navigate = useNavigate();
     return (
-        <Flex id="employer-registration" justify="center">
+        <Flex id="company-profile" justify="center">
             <Flex direction="column" gap="7" className="form-container">
-                <Heading as="h1">Your employer account</Heading>
+                <Heading as="h1">Company Profile</Heading>
 
                 <Box>
                     <Strong>Your details</Strong>
@@ -72,4 +72,4 @@ const EmployerResgistration = () => {
     );
 };
 
-export default EmployerResgistration;
+export default CompanyProfile;

@@ -1,0 +1,72 @@
+#job-search .filter-area {
+    background: url("https://t4.ftcdn.net/jpg/05/25/61/13/360_F_525611352_EaS8r4ILqqjWRwZB3kYPEjJyREWvOGLf.webp");
+    background-size: cover;
+    height: 160px;
+    width: 100%;
+}
+
+#job-search .filter-area .rt-TextFieldRoot,
+#job-search .filter-area .search-container {
+    height: 50px;
+    font-size: 17px;
+    border-radius: 7px;
+    background: white;
+}
+
+#job-search .filter-area .rt-TextFieldRoot input,
+#job-search .filter-area .search-container {
+    padding: 5px;
+}
+
+#job-search .filter-area .search-container {
+    width: 400px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+#industry-options-popover {
+    padding: 0px;
+}
+
+#industry-options-popover .option {
+    padding: 5px 0px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+#industry-options-popover .option:hover {
+    background: black;
+    color: white;
+    opacity: 0.6;
+}
+
+#industry-options-popover .option.selected {
+    background: black;
+    color: white;
+}
+
+#job-search .company-details-container {
+    border: 3px solid var(--border-black-400);
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+#job-search .company-details-container:hover {
+    border: 3px solid var(--blue-700);
+    transition: border 0.3s ease, transform 0.3s ease;
+}
+
+#job-search .company-details-container strong {
+    font-size: 18px;
+}
+
+#job-search .company-details-container p {
+    font-size: 16px;
+    color: var(--gray-700);
+}
+#job-search .company-details-container img {
+    height: 80px;
+    width: 80px;
+}

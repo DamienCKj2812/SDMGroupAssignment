@@ -1,10 +1,13 @@
 :root {
     --white: #ffffff;
-    
+
+    --blue-300: #e3f2fb;
     --blue-700: #3355ac;
 
+    --gray-300: #f3f5f7;
     --gray-400: #eceef2;
-    --gray-500: #b8babe
+    --gray-500: #b8babe;
+    --gray-700: #5a6881;
     --primary-color: #111214;
 
     --interactive-default: hsla(0, 0%, 50%, 0.5);
@@ -12,6 +15,13 @@
 
     --registration-form-background: #f7f8fb;
 
+    --border-black-300: #f3f5f7;
+    --border-black-400: #eaecf1;
+
     /* For shadow */
     --elevation-low: 0 1px 0 hsl(0 calc(1 * 0%) 0.8% / 0.2), 0 1.5px 0 hsl(240 calc(1 * 7.7%) 2.5% / 0.05), 0 2px 0 hsl(0 calc(1 * 0%) 0.8% / 0.05);
+
+    .rt-BaseDialogScrollPadding {
+        padding: 0px;
+    }
 }

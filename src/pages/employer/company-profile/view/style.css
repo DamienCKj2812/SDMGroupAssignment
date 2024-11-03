@@ -1,28 +1,28 @@
-#employer-registration {
+#company-profile {
     background: var(--registration-form-background);
     padding-bottom: 60px;
 }
 
-#employer-registration .form-container {
+#company-profile .form-container {
     width: 600px;
     margin-top: 40px;
 }
 
-#employer-registration .form-container h1 {
+#company-profile .form-container h1 {
     font-size: 26px;
 }
 
-#employer-registration .form-container strong {
+#company-profile .form-container strong {
     font-weight: 600;
     font-size: 23px;
 }
 
-#employer-registration .form-container label {
+#company-profile .form-container label {
     font-weight: 600;
     font-size: 18px;
 }
 
-#employer-registration .form-container .form-details-container {
+#company-profile .form-container .form-details-container {
     margin-top: 20px;
     padding: 20px;
     background: white;

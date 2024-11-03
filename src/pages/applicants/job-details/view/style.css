@@ -1,0 +1,72 @@
+#job-details .company-background {
+    height: 300px;
+    width: 100%; /* Makes the box span the full width */
+    background-size: cover; /* Ensures the image fully covers the box */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    border-radius: 17px;
+}
+
+#job-details .cursor {
+    cursor: pointer;
+}
+
+#job-details .company-details h1 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#job-details .company-details p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#job-details .company-details label {
+    color: var(--gray-700);
+}
+
+#job-details .company-details .rt-BaseButton {
+    padding: 20px;
+}
+
+#job-details .company-details strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#job-details .company-details .job-details-container-1 {
+    text-transform: capitalize;
+}
+
+#job-details .company-details .job-details-container-1 svg {
+    height: 15px;
+    width: 15px;
+}
+
+#job-details .company-details .job-details-container-1 label {
+    font-size: 16px;
+}
+
+#job-details .company-details .job-details-container-2 svg {
+    height: 7px;
+    width: 7px;
+    margin-top: 15px;
+}
+
+
+#job-details .company-details .job-details-container-3 svg {
+    height: 7px;
+    width: 7px;
+    margin-top: 15px;
+}
+
+#job-details .company-profile-container {
+    border-radius: 10px;
+    border: 4px solid var(--gray-400);
+    padding: 15px;
+}
+
+
+#job-details .company-profile-container h1{
+    font-size: 23px
+}

@@ -5,26 +5,81 @@ export interface IUser {
     password: string;
 }
 
-export interface IJob {
-    jobId: number;
+export interface IApplicantSetting {
+    userId: number;
+    personalDetails: {
+        firstName: string;
+        lastName: string;
+        homeLocation: string;
+        profileImage: string;
+        banner: string;
+        phoneNumber: string;
+    };
+    personalSummary: string | null;
+    role: {
+        jobTitle: string;
+        companyName: string;
+        started: { month: string; year: string };
+        ended: { month: string; year: string };
+        stillInRole: boolean;
+        description: string;
+    }[];
+    education: {
+        courseOrQualification: string;
+        institution: string;
+        finished: string;
+        courseHighlights: string;
+    }[];
+    license: {
+        licenseName: string;
+        issuingOrganisation: string;
+        issue: {
+            month: string;
+            year: string;
+        };
+        expiryDate: {
+            month: string;
+            year: string;
+        };
+        description: string;
+    }[];
+    skills: string[];
+    languages: string[];
+}
+
+export interface ICompany {
+    companyId: number;
     name: string;
+    img: {
+        icon: string;
+        background: string;
+    };
     about: {
         industry: string;
         companySize: string;
         primaryLocation: string;
-        spcialities: string;
-        story: `
-        Health Lane Family Pharmacy is a growing chain of pharmacy with more than 30 years of experience! We currently have more than 200 outlets in Klang Valley, Negeri Sembilan, Melaka, Johor, Pahang, Perak, Penang, Sarawak and still expanding.
-We believe “GREAT HEALTH BEGINS HERE”, our goal is to establish a long term relationship with our customers, treating them like our family by providing caring advice and recommending wholesome solutions to help them achieve great health.
-In order to achieve our goal, we employ a dedicated team of licensed and experienced pharmacists, well trained nutritionists, dietitians and health advisors to provide the best service and consultation to our customers.`;
+        story: string;
     };
     reviews: {
-        feedbacks: number[];
+        feedbacksRating: number[];
         recommended: {
             value: number;
             reason: string;
-        };
+        }[];
     };
+}
+
+export interface IJob {
+    jobId: number;
+    companyId: number;
+    position: string;
+    salary: string;
+    type: "Contract/Temp" | "Full time";
+    postedFrom: number;
+    objectives: string;
+    responsibilities: string[];
+    requirements: string[];
+    employerQuestions: string[];
 }
 
 export interface IReview {

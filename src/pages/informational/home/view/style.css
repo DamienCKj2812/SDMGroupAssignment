@@ -1,0 +1,330 @@
+#employer-home-page .panel {
+    background-color: #e60278;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#employer-home-page .panel .text1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#employer-home-page .panel2 {
+    background-image: url("src/_common/assets/home-backgrounds.jpg"); /* Path to your image */
+    background-size: cover; /* Scale image to cover the entire div */
+    background-position: center 40%; /* Center the image within the div */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    width: 100%; /* Adjust width as needed */
+    height: 750px;
+    padding-top: 75px; /* Adjust height as needed */ /* Optional: rounded corners */
+}
+#employer-home-page .panel2 a {
+    color: white;
+    text-decoration: none;
+}
+
+#employer-home-page .panel2 .insidepanel2 {
+    margin-top: 30px;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    margin-left: 300px;
+    width: 35%; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    /* Centers text inside the container */
+}
+
+#employer-home-page .panel2 .insidepanel2 .job-ads {
+    background-color: #f9ebfd;
+    padding: 10px;
+}
+
+#employer-home-page .panel2 .insidepanel2 h1 {
+    font-size: 45px;
+    margin-top: 10px;
+    line-height: 1; /* Adjust this value to reduce the gap between lines */
+}
+
+#employer-home-page .panel2 .insidepanel2 button {
+    background-color: #e60278;
+}
+
+/* style.css */
+#employer-home-page .custom-textfield {
+    width: 100%; /* Set the desired width */
+    max-width: 100%; /* Ensures responsiveness */
+}
+
+#employer-home-page .panel2 .insidepanel2 a {
+    color: blue;
+    text-decoration: none;
+}
+
+#employer-home-page .panel3 h1 {
+    text-align: center;
+}
+
+#employer-home-page .panel3 .words-container {
+    text-align: center;
+    margin: 0 auto; /* Center-aligns the container */
+    gap: 2%; /* Adjust gap as needed */
+    width: 60%; /* Center and control width */
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#employer-home-page .panel3 .middle-button {
+    margin: 0 auto; /* Center-aligns the container */
+    width: 60%; /* Center and control width */
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    width: 13%;
+    background-color: #e60278;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#employer-home-page .panel3 .header1 {
+    font-size: 43px;
+}
+
+#employer-home-page .panel3 .words-container h2 {
+    font-size: 26px;
+}
+
+#employer-home-page .panel3 .words-container p {
+    font-size: ;
+}
+
+#employer-home-page .panel3 .line {
+    margin-top: 80px;
+    margin-left: 15%;
+    margin-right: 15%;
+    transparent: 8px;
+    margin-bottom: 80px;
+}
+
+#employer-home-page .panel3 .words-container2 .wrap {
+    background-color: #feeffa;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#employer-home-page .panel3 .words-container2 {
+    text-align: center;
+    margin: 0 auto; /* Center-aligns the container */
+    gap: 2%; /* Adjust gap as needed */
+    width: 70%; /* Center and control width */
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#employer-home-page .panel3 .words-container2 h2 {
+    font-size: 26px;
+}
+
+#employer-home-page .panel3 .words-container2 p {
+    font-size: 18px;
+}
+
+/* applicant-home-page */
+#applicant-home-page {
+    margin: 0px 120px;
+}
+
+#applicant-home-page .find-your-next-employer{
+    
+}
+
+#applicant-home-page .find-your-next-employer .embla {
+    overflow: hidden;
+}
+#applicant-home-page .find-your-next-employer .embla__container {
+    display: flex;
+}
+#applicant-home-page .find-your-next-employer .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+#applicant-home-page .find-your-next-employer .company-container {
+    border: 3px solid var(--border-black-300);
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#applicant-home-page .find-your-next-employer .company-container img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+#applicant-home-page .find-your-next-employer .company-container label {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 8px;
+    background-color: var(--border-black-300);
+    width: fit-content;
+}
+
+#applicant-home-page .find-your-next-employer button {
+    background: transparent;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+    width: fit-content;
+    transition: background 0.3s ease;
+}
+
+#applicant-home-page .find-your-next-employer button:hover {
+    background: black;
+    color: white;
+}
+
+#applicant-home-page .search-panel{
+    background-color: #051a49;
+    width: calc(100% + 240px);  /* Expands to ignore outer margins */
+    height: 50%;
+    color: white;
+    margin-left: -120px;  /* Offset to the left */
+    margin-right: -120px; /* Offset to the right */
+    padding-top: 2%; 
+    padding-bottom:4%; 
+    padding-left:25%;
+    padding-right:25%;
+    font-size:22px;
+    
+    justify-content: center;
+}
+
+#applicant-home-page .search-panel button{
+    background-color:#e60278;
+    width: ;  /* Expands to ignore outer margins */
+    height:45px ;
+    color: white;
+    margin-left:;  /* Offset to the left */
+    margin-right:; /* Offset to the right */
+    padding: ; 
+
+}
+
+/* styles.css */
+#applicant-home-page .search-panel .custom-textfield {
+    width: 30%; /* Set your desired width */
+    height:45px;
+    background-color:white;
+    border-radius:10px;
+    color:white;
+}
+
+#applicant-home-page .search-panel  .custom-dropdown {
+    width: 30%; /* Set your desired width */
+    height:45px;
+    background-color:white;
+    border-radius:10px;
+    color:white;
+}
+
+#applicant-home-page .signin{
+    text-align: center;
+    margin: 0 auto; /* Center-aligns the container */
+    background-color:#f3f5f7;
+    width: 80%; /* Center and control width */
+    justify-content: center;
+    margin-top:40px;
+    padding:30px;
+    font-size:20px;
+    border-radius:10px;
+}
+
+
+#applicant-home-page .signin button{
+    width:25%;
+    background-color:#f3f5f7;
+    color:black;
+    border: 2px solid black;
+    margin:auto; /* Center-aligns the container */
+    justify-content: center;
+    padding:20px;
+    margin-bottom:30px;
+    margin-top:20px;
+    font-size:18px;
+    border-radius:10px;
+}
+
+#applicant-home-page .two-cards{
+}
+
+#applicant-home-page .two-cards .card {
+    background-color: #e60278;
+    background-image: url("src/_common/assets/handsomeguy.png");
+    background-size: contain; /* Ensures the image covers the entire card area */
+    background-position: 85% 20%; /* 75% from the left, 20% from the top */
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    height: 350px;
+    background-repeat: no-repeat; 
+    color:white;
+}
+
+#applicant-home-page .two-cards .card button{
+    background-color:white;
+    color:black;
+    width:25%;
+    font-size:15px;
+}
+
+#applicant-home-page .two-cards .card2 button{
+    background-color:#e60278;
+    color:white;
+    width:25%;
+    font-size:15px;
+}
+
+#applicant-home-page .two-cards .card2 {
+    background-color:#f3f5f7 ;
+    background-image: url("src/_common/assets/girl.png");
+    background-size: contain; /* Ensures the image covers the entire card area */
+    background-position: 75% 20%; /* 75% from the left, 20% from the top */
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    height: 350px;
+    background-repeat: no-repeat; 
+}
+
+
+#applicant-home-page .img-size{
+    height:120px;
+    margin-bottom:40px;
+}
+
+#applicant-home-page .quick-search{
+    justify-content: flex-start; /* or center / flex-end / space-between / space-around */
+    align-items: center; /* or flex-start / flex-end */
+    
+}
+
+#applicant-home-page .quick-search .data{
+
+    
+}
+
