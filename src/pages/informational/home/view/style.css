@@ -320,5 +320,11 @@
 #applicant-home-page .quick-search{
     justify-content: flex-start; /* or center / flex-end / space-between / space-around */
     align-items: center; /* or flex-start / flex-end */
+    
+}
+
+#applicant-home-page .quick-search .data{
+
+    
 }
 
