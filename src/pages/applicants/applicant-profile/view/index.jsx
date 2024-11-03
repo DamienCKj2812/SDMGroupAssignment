@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./style.css";
 import { applicantSetting } from "../../../../_common/data/setting-list";
 import { useRecoilState } from "recoil";
@@ -13,8 +13,7 @@ import ApplicantSkills from "./components/applicant-skills";
 import ApplicantLanguage from "./components/applicant-language";
 import ApplicantResume from "./components/applicant-resume";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useForm } from "react-hook-form";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const ApplicantProfile = () => {
     const [currentUser] = useRecoilState(currentLoggedInUserState);

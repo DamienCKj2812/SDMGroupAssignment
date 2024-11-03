@@ -15,6 +15,18 @@ export const protectedRoutes = [
         element: withLazyComponent(React.lazy(() => import("../pages/applicants/job-search/view"))),
     },
     {
+        category: "applicant",
+        name: "job-details",
+        path: "applicant/job/:jobId",
+        element: withLazyComponent(React.lazy(() => import("../pages/applicants/job-details/view"))),
+    },
+    {
+        category: "applicant",
+        name: "company-details",
+        path: "applicant/company/:companyId",
+        element: withLazyComponent(React.lazy(() => import("../pages/applicants/explore-companies/company-details/view"))),
+    },
+    {
         category: "employer",
         name: "dashboard",
         path: "employer/dashboard",

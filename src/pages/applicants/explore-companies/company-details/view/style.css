@@ -1,0 +1,45 @@
+#company-details .company-background {
+    height: 300px;
+    width: 100%; /* Makes the box span the full width */
+    background-size: cover; /* Ensures the image fully covers the box */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    border-radius: 17px;
+}
+
+#company-details .cursor {
+    cursor: pointer;
+}
+
+#company-details h1 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#company-details p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#company-details label {
+    color: var(--gray-700);
+}
+
+#company-details .rt-BaseButton {
+    padding: 20px;
+}
+
+#company-details strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#company-details .company-profile-container {
+    border-radius: 10px;
+    border: 4px solid var(--gray-400);
+    padding: 15px;
+}
+
+#company-details .company-profile-container h1 {
+    font-size: 23px;
+}

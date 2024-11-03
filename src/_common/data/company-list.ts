@@ -88,7 +88,7 @@ export const companyList: ICompany[] = [
         img: {
             icon: "https://cdn.dribbble.com/userupload/16577558/file/original-79c301d6a3aaa6c59245108586ee5733.jpg?resize=400x0",
             background:
-                "https://lh5.googleusercontent.com/proxy/E5RNQZMa6GterLws4_M6eb-Yd0WrBTpRH6f9F34rU0VMKza6ty4XRsSvEvilzS1ZyoGjhk3zT8_RbZyoyt-xbSVUFliiDoTjX5J3gy0DeHAwMqeRShwu",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWjO5ueyane7PlRscFKzZSgxr5x6F_cHHxzw&s",
         },
         about: {
             industry: "information technology",
