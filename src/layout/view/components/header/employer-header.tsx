@@ -13,7 +13,9 @@ const EmployerHeader = () => {
 
     return (
         <Flex justify="between" align="center" id="layout-header">
-            <Heading mr="6">Applicant Finder</Heading>
+            <Heading mr="6" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
+                Applicant Finder
+            </Heading>
 
             <Flex align="center">
                 <Flex gap="5" className="page-options">
