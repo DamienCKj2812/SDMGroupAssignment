@@ -1,0 +1,43 @@
+#companies .company-detail-card {
+    padding: 20px;
+    border: 3px solid var(--gray-400);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#companies .company-detail-card strong {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#companies .company-detail-card p {
+    font-size: 20px;
+}
+
+#companies .company-detail-card .jobs-available-container {
+    padding: 10px;
+    background: var(--green-400);
+    width: fit-content;
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--green-600);
+}
+
+#companies .company-detail-card strong {
+    font-size: 15px;
+}
+
+#companies .company-detail-card p {
+    text-transform: capitalize;
+    font-size: 17px;
+}
+
+#companies .company-detail-card:hover {
+    background: black;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#companies .company-detail-card:hover .jobs-available-container {
+    background: white;
+}

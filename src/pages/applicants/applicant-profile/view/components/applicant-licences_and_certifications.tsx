@@ -1,6 +1,6 @@
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Box, Button, Dialog, Flex, Heading, ScrollArea, Select, Strong, Text, TextField, Tooltip } from "@radix-ui/themes";
+import { Box, Button, Dialog, Flex, Heading, Select, Strong, Text, TextField, Tooltip } from "@radix-ui/themes";
 import React, { useState } from "react";
 import { applicantSetting } from "../../../../../_common/data/setting-list";
 import { useForm, useFieldArray, Controller } from "react-hook-form";
