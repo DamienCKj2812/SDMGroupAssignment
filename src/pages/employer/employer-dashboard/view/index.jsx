@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
-import { Flex } from "@radix-ui/themes";
+import { Box, Flex } from "@radix-ui/themes";
+import Dashboard from "./components/dashboard";
 import ReactECharts from "echarts-for-react";
 
 const graphOptions = {
@@ -11,10 +12,6 @@ const graphOptions = {
     },
     tooltip: {
         trigger: "axis",
-    },
-    legend: {
-        data: ["Applied", "Interviewed", "Hired"],
-        bottom: "10%",
     },
     xAxis: {
         type: "category",
@@ -54,8 +51,11 @@ const graphOptions = {
 
 const EmployerDashboard = () => {
     return (
-        <Flex height="400px" width="400px">
-            <ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
+        <Flex justify="center" direction="column">
+            <Box height="400px">
+                <ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
+            </Box>
+            <Dashboard />
         </Flex>
     );
 };
