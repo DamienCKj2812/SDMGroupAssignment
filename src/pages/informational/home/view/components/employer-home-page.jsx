@@ -48,7 +48,7 @@ const EmplolyerHomePage = () => {
                 <Flex className="words-container">
                     <Box>
                         <Box className="img-size">
-                            <img src=""></img>
+                            <img src="src/_common/assets/quality.png" className="image-icon"></img>
                         </Box>
 
                         <h2>1st choice for Malaysian job seekers</h2>
@@ -57,7 +57,7 @@ const EmplolyerHomePage = () => {
 
                     <Box>
                         <Box className="img-size">
-                            <img src=""></img>
+                            <img src="src/_common/assets/followers.png" className="image-icon"></img>
                         </Box>
                         <h2>Over 5 million candidate profiles</h2>
                         <p>Reach our large and diverse pool of Malaysian talent for your business</p>
@@ -65,7 +65,7 @@ const EmplolyerHomePage = () => {
 
                     <Box>
                         <Box className="img-size">
-                            <img src=""></img>
+                            <img src="src/_common/assets/approved.png" className="image-icon"></img>
                         </Box>
                         <h2>#1 job placements in Malaysia</h2>
                         <p>Highest success rate in matching employers to the right talent</p>
@@ -80,32 +80,50 @@ const EmplolyerHomePage = () => {
 
                 <Flex className="words-container2">
                     <Box className="wrap">
-                        <Box className="img-size">
-                            <img src=""></img>
-                        </Box>
-
+                        <h1 className="number">1</h1>
                         <h2>1st choice for Malaysian job seekers</h2>
                         <p>Meet job seekers where they prefer to search for jobs</p>
                     </Box>
 
                     <Box className="wrap">
-                        <Box className="img-size">
-                            <img src=""></img>
-                        </Box>
+                        <h1 className="number">2</h1>
                         <h2>Over 5 million candidate profiles</h2>
                         <p>Reach our large and diverse pool of Malaysian talent for your business</p>
                     </Box>
 
                     <Box className="wrap">
-                        <Box className="img-size">
-                            <img src=""></img>
-                        </Box>
+                    <h1 className="number">3</h1>
                         <h2>#1 job placements in Malaysia</h2>
                         <p>Highest success rate in matching employers to the right talent</p>
                     </Box>
                 </Flex>
 
                 <Button className="middle-button">Create account</Button>
+
+                <hr className="line"></hr>
+
+                <Flex className="two-cards" gap="2">
+                <Box className="card">
+                    <Box className="img-size">
+                        <img src=""></img>
+                    </Box>
+                    <Flex direction="column">
+                    <h2>Boost your hiring with instant candidate recommendations</h2>
+                    <Text>Get access to over 4 million searchable profiles when you post a job ad, and we’ll match you with relevant candidates.</Text>
+                    <Button mt="3">Find out about talent search</Button>
+                    </Flex>
+                </Box>
+
+                <Box className="card2">
+                    <Box className="img-size">
+                        <img src=""></img>
+                    </Box>
+                    
+                </Box>
+            </Flex>
+
+            <hr className="line"></hr>
+
             </Box>
         </Box>
     );

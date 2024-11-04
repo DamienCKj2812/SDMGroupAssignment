@@ -29,22 +29,25 @@ const ApplicantHomePage = () => {
                 </Flex>
                 <Flex justify="center" align="center" gap="5" mt="3">
                     <TextField.Root className="custom-textfield" placeholder="Enter Keyword" />
-                    <Select.Root defaultValue="apple">
-	<Select.Trigger/>
+                    <Select.Root >
+	<Select.Trigger className="custom-select" placeholder="Any Classifications" />
 	<Select.Content>
 		<Select.Group>
-			<Select.Label>Fruits</Select.Label>
-			<Select.Item value="orange">Orange</Select.Item>
-			<Select.Item value="apple">Apple</Select.Item>
-			<Select.Item value="grape" disabled>
-				Grape
-			</Select.Item>
+        <   Select.Label>Job Roles</Select.Label>
+			<Select.Item value="accounting">Accounting</Select.Item>
+			<Select.Item value="administration">Administration</Select.Item>
+			<Select.Item value="marketing">Marketing</Select.Item>
+			<Select.Item value="banking-financial">Banking & Financial</Select.Item>
+			<Select.Item value="customer-support">Customer Support</Select.Item>
+			<Select.Item value="education-training">Education & Training</Select.Item>
+			<Select.Item value="engineering">Engineering</Select.Item>
+			<Select.Item value="information-technology">Information & Technology</Select.Item>
+			<Select.Item value="human-resources">Human Resources</Select.Item>
 		</Select.Group>
-	
 	</Select.Content>
 </Select.Root>
                     <TextField.Root className="custom-textfield" placeholder="Enter City" />
-                    <Button>Seek</Button>
+                    <Button className="custom-button">Seek</Button>
                 </Flex>
             </Box>
             <Box className="signin">
@@ -52,7 +55,7 @@ const ApplicantHomePage = () => {
                     <Button mt="5" onClick={() => navigate("/login")}>
                         Sign in
                     </Button>
-                    <Button mt="5">Register</Button>
+                    <Button mt="5" onClick={() => navigate("/register")}>Register</Button>
                 </Flex>
                 <Text>Sign in to manage your Profile, save searches and view your recommended jobs.</Text>
             </Box>
@@ -133,7 +136,7 @@ const ApplicantHomePage = () => {
                         <Text as="p" m="0" wrap="nowrap">
                             Classification
                         </Text>
-                        <Flex gap="4" wrap="wrap" className="data">
+                        <Flex gap="7" wrap="wrap" className="data">
                             {quickSearchClassificationData.map((category, index) => {
                                 return (
                                     <Text key={category} style={{ textDecoration: "underline" }}>
@@ -147,7 +150,7 @@ const ApplicantHomePage = () => {
                     <Text as="p" m="0" wrap="nowrap">
                             Most Cities
                         </Text>
-                        <Flex gap="4" wrap="wrap" className="data">
+                        <Flex gap="7" wrap="wrap" className="data">
                             {quickSearchCitiesData.map((category, index) => {
                                 return (
                                     <Text key={category} style={{ textDecoration: "underline" }}>
@@ -161,7 +164,7 @@ const ApplicantHomePage = () => {
                     <Text as="p" m="0" wrap="nowrap">
                            Other
                         </Text>
-                        <Flex gap="4" wrap="wrap" className="data">
+                        <Flex gap="7" wrap="wrap" className="data">
                             {quickSearchOtherData.map((category, index) => {
                                 return (
                                     <Text key={category} style={{ textDecoration: "underline" }}>

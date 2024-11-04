@@ -68,7 +68,9 @@
 
 #employer-home-page .panel3 h1 {
     text-align: center;
+   
 }
+
 
 #employer-home-page .panel3 .words-container {
     text-align: center;
@@ -80,6 +82,19 @@
     margin-top: 60px;
 }
 
+#employer-home-page .panel3 .words-container2 .number{
+    display: inline-flex; /* Centers the text in the container */
+    align-items: center; /* Centers the number vertically */
+    justify-content: center; /* Centers the number horizontally */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Same as width to make it a perfect circle */
+    background-color: #e60278; /* Background color of your choice */
+    color: white; /* Text color */
+    border-radius: 50%; /* Makes the background circular */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
 #employer-home-page .panel3 .middle-button {
     margin: 0 auto; /* Center-aligns the container */
     width: 60%; /* Center and control width */
@@ -87,7 +102,7 @@
     justify-content: center;
     margin-top: 60px;
     width: 13%;
-    background-color: #e60278;
+    background-color: #1e47a9;
     padding: 20px;
     font-size: 20px;
 }
@@ -101,7 +116,19 @@
 }
 
 #employer-home-page .panel3 .words-container p {
-    font-size: ;
+    font-size: 20px;
+}
+
+#employer-home-page .panel3 .words-container .image-icon{
+    width:40%;
+    background-size: contain;  /* First value covers the whole image, second is the pattern size */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#employer-home-page .panel3 .words-container .img-size{
+    height:120px;
+    margin-bottom:10%;
 }
 
 #employer-home-page .panel3 .line {
@@ -136,8 +163,57 @@
 }
 
 #employer-home-page .panel3 .words-container2 p {
-    font-size: 18px;
+    font-size: 20px;
 }
+
+#employer-home-page .panel3 .two-cards{
+    margin: 0 auto; /* Center-aligns the container */
+    width: 80%; /* Center and control width */
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    padding: 20px;
+    font-size: 20px;
+}
+
+#employer-home-page .panel3 .two-cards .card {
+    background-image: url("");
+    background-size: contain; /* Ensures the image covers the entire card area */
+    background-position: 85% 20%; /* 75% from the left, 20% from the top */
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    width:35%;
+    height: 350px;
+    background-repeat: no-repeat; 
+    text-align:center;
+   
+}
+
+#employer-home-page .panel3 .two-cards button{
+    gap:30px;
+    background-color:#f3f5f7;
+    color:black;
+    border: 2px solid black;
+    padding:20px;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+#employer-home-page .panel3 .two-cards .card2 {
+    background-image: url("src/_common/assets/hiring.jpg");
+    background-size: cover; /* Covers the entire card, filling the area */
+    background-position: center; /* Centers the image within the card */
+    background-repeat: no-repeat; /* Ensures no repetition of the image */
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 50%; /* Width as a percentage of the parent container */
+    height: 350px; /* Fixed height, adjust as needed */
+    overflow: hidden;
+   
+}
+
 
 /* applicant-home-page */
 #applicant-home-page {
@@ -214,14 +290,15 @@
     justify-content: center;
 }
 
-#applicant-home-page .search-panel button{
+#applicant-home-page .search-panel .custom-button{
     background-color:#e60278;
-    width: ;  /* Expands to ignore outer margins */
+    width: 70px;  /* Expands to ignore outer margins */
     height:45px ;
     color: white;
     margin-left:;  /* Offset to the left */
     margin-right:; /* Offset to the right */
-    padding: ; 
+    padding:20px; 
+    font-size:17px;
 
 }
 
@@ -231,7 +308,15 @@
     height:45px;
     background-color:white;
     border-radius:10px;
-    color:white;
+    font-size:17px;
+}
+
+#applicant-home-page .search-panel .custom-select {
+    width: 30%; /* Set your desired width */
+    height:45px;
+    background-color:white;
+    border-radius:10px;
+    font-size:17px;
 }
 
 #applicant-home-page .search-panel  .custom-dropdown {
