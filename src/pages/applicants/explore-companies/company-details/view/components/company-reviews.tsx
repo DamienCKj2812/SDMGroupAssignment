@@ -59,7 +59,7 @@ const CompanyReviews = ({ companyDetail, jobs }: { companyDetail: ICompany; jobs
 
                 {companyDetail.reviews.recommended.map((r) => {
                     return (
-                        <Flex direction="column" gap="2" align="center" width="200px">
+                        <Flex direction="column" gap="2" align="center" width="200px" key={r.value}>
                             <Box height="80px" width="80px">
                                 <CircularProgressbar value={r.value} text={`${r.value}%`} strokeWidth={5} />
                             </Box>

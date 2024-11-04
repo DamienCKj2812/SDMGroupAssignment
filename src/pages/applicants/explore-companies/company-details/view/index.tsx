@@ -1,6 +1,6 @@
-import { Avatar, Box, Button, Flex, Heading, SegmentedControl, Strong, Text } from "@radix-ui/themes";
+import { Avatar, Box, Button, Flex, SegmentedControl, Strong, Text } from "@radix-ui/themes";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,10 +15,21 @@ import CompanyJobs from "./components/company-jobs";
 import CompanyReviews from "./components/company-reviews";
 
 const CompanyDetails = () => {
+    const location = useLocation();
     const [jobs, setJobs] = useState<IJob[]>();
     const [companyDetail, setCompanyDetail] = useState<ICompany>();
     const { companyId } = useParams();
     const [category, setCategory] = useState("About");
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const { defaultCategory } = location.state || {};
+        if (defaultCategory) {
+            setCategory(defaultCategory);
+        } else {
+            setCategory("About");
+        }
+    }, [location.state]);
 
     function generateStar(rating: number) {
         return Array.from({ length: 5 }, (_, index) => (
@@ -40,6 +51,7 @@ const CompanyDetails = () => {
             </Flex>
         );
     }
+
     return (
         <Flex direction="column" id="company-details" align="center">
             <Flex maxWidth="1000px" width="100%" direction="column" gap="5">
@@ -69,14 +81,14 @@ const CompanyDetails = () => {
                         </Flex>
                     </Box>
 
-                    <Button>
+                    <Button onClick={() => navigate(`../applicant/review-company/${companyDetail.companyId}`)}>
                         <FontAwesomeIcon icon={faPen} style={{ marginRight: "5px" }} />
                         <Text as="p" m="0">
                             Write a review
                         </Text>
                     </Button>
                 </Flex>
-                <SegmentedControl.Root defaultValue="About" onValueChange={setCategory}>
+                <SegmentedControl.Root defaultValue={category} onValueChange={setCategory}>
                     {["About", "Jobs", "Reviews"].map((s) => {
                         return (
                             <SegmentedControl.Item value={s} key={s}>

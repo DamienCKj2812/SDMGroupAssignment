@@ -72,11 +72,31 @@ const JobDetails = () => {
                                 </Text>
                             </Flex>
 
-                            <Text as="p" m="0" style={{ textDecoration: "underline" }} className="pointer">
+                            <Text
+                                as="p"
+                                m="0"
+                                style={{ textDecoration: "underline" }}
+                                className="pointer"
+                                onClick={() =>
+                                    navigate(`../applicant/company/${companyDetail.companyId}`, {
+                                        state: { defaultCategory: "Reviews" },
+                                    })
+                                }
+                            >
                                 {companyDetail.reviews.feedbacksRating.length} reviews
                             </Text>
 
-                            <Text as="p" m="0" style={{ textDecoration: "underline" }} className="pointer">
+                            <Text
+                                as="p"
+                                m="0"
+                                style={{ textDecoration: "underline" }}
+                                className="pointer"
+                                onClick={() =>
+                                    navigate(`../applicant/company/${companyDetail.companyId}`, {
+                                        state: { defaultCategory: "Jobs" },
+                                    })
+                                }
+                            >
                                 View all jobs ({jobList.filter((j) => j.companyId == companyDetail.companyId).length || 0})
                             </Text>
                         </Flex>
@@ -212,7 +232,11 @@ const JobDetails = () => {
                                 {companyDetail.about.story}
                             </Text>
 
-                            <Button style={{ width: "fit-content" }} variant="outline" onClick={() => navigate(`../applicant/company/${companyDetail.companyId}`)}>
+                            <Button
+                                style={{ width: "fit-content" }}
+                                variant="outline"
+                                onClick={() => navigate(`../applicant/company/${companyDetail.companyId}`)}
+                            >
                                 More about this company
                                 <FontAwesomeIcon icon={faChevronRight} />
                             </Button>
