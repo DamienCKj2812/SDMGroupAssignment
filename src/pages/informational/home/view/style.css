@@ -1,5 +1,5 @@
 #employer-home-page .panel {
-    background-color: #e60278;
+    background-color:#1B1212;
     padding: 20px;
     color: white;
     display: flex;
@@ -41,7 +41,7 @@
 }
 
 #employer-home-page .panel2 .insidepanel2 .job-ads {
-    background-color: #f9ebfd;
+    background-color:#efefef;
     padding: 10px;
 }
 
@@ -52,7 +52,7 @@
 }
 
 #employer-home-page .panel2 .insidepanel2 button {
-    background-color: #e60278;
+    background-color: #1B1212;
 }
 
 /* style.css */
@@ -88,7 +88,7 @@
     justify-content: center; /* Centers the number horizontally */
     width: 50px; /* Adjust size as needed */
     height: 50px; /* Same as width to make it a perfect circle */
-    background-color: #e60278; /* Background color of your choice */
+    background-color: #1B1212; /* Background color of your choice */
     color: white; /* Text color */
     border-radius: 50%; /* Makes the background circular */
     font-size: 24px; /* Adjust font size as needed */
@@ -102,7 +102,7 @@
     justify-content: center;
     margin-top: 60px;
     width: 13%;
-    background-color: #1e47a9;
+    background-color: #1B1212;
     padding: 20px;
     font-size: 20px;
 }
@@ -140,7 +140,7 @@
 }
 
 #employer-home-page .panel3 .words-container2 .wrap {
-    background-color: #feeffa;
+    background-color: #efefef;
     padding-left: 40px;
     padding-right: 40px;
     border-radius: 10px;
@@ -275,7 +275,7 @@
 }
 
 #applicant-home-page .search-panel{
-    background-color: #051a49;
+    background-color: #1B1212;
     width: calc(100% + 240px);  /* Expands to ignore outer margins */
     height: 50%;
     color: white;
@@ -291,10 +291,10 @@
 }
 
 #applicant-home-page .search-panel .custom-button{
-    background-color:#e60278;
+    background-color:#efefef;
     width: 70px;  /* Expands to ignore outer margins */
     height:45px ;
-    color: white;
+    color: black;
     margin-left:;  /* Offset to the left */
     margin-right:; /* Offset to the right */
     padding:20px; 
@@ -330,7 +330,7 @@
 #applicant-home-page .signin{
     text-align: center;
     margin: 0 auto; /* Center-aligns the container */
-    background-color:#f3f5f7;
+    background-color:#efefef;
     width: 80%; /* Center and control width */
     justify-content: center;
     margin-top:40px;
@@ -342,7 +342,7 @@
 
 #applicant-home-page .signin button{
     width:25%;
-    background-color:#f3f5f7;
+    background-color:#efefef;
     color:black;
     border: 2px solid black;
     margin:auto; /* Center-aligns the container */
@@ -358,7 +358,7 @@
 }
 
 #applicant-home-page .two-cards .card {
-    background-color: #e60278;
+    background-color: #1B1212;
     background-image: url("src/_common/assets/handsomeguy.png");
     background-size: contain; /* Ensures the image covers the entire card area */
     background-position: 85% 20%; /* 75% from the left, 20% from the top */
@@ -378,14 +378,14 @@
 }
 
 #applicant-home-page .two-cards .card2 button{
-    background-color:#e60278;
+    background-color:#1B1212;
     color:white;
     width:25%;
     font-size:15px;
 }
 
 #applicant-home-page .two-cards .card2 {
-    background-color:#f3f5f7 ;
+    background-color:#efefef;
     background-image: url("src/_common/assets/girl.png");
     background-size: contain; /* Ensures the image covers the entire card area */
     background-position: 75% 20%; /* 75% from the left, 20% from the top */
