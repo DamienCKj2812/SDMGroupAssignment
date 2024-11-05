@@ -71,9 +71,10 @@
   }
   
   .cards {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+    width: 35%; /* Set a width to fit with the table */
   }
   
   @media (min-width: 768px) {
@@ -87,7 +88,8 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     border-radius: 0.5rem;
     padding: 2rem;
-    text-align: center;
+ 
+    
   }
   
   .card h2 {
@@ -114,7 +116,17 @@
   .card-button:hover {
     background-color: #2B6CB0;
   }
+
+.panel1{
+  display: flex;
+    gap: 2rem; /* Space between cards and table */
+    width: 110%;
+}
   
+.table-container {
+  width: 80%; /* Remaining width for the table */
+}
+
   .table {
     width: 100%;
     border-collapse: collapse;
@@ -138,11 +150,15 @@
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
+    width:100px;
+    margin:2px;
   }
+  
   
   .table-actions button:first-child {
     background-color: #3182CE;
     color: white;
+    
   }
   
   .table-actions button:first-child:hover {
