@@ -77,7 +77,7 @@ const ApplicantPersonalSummary = () => {
             </Flex>
 
             <ToastPopover openToast={openToast} setOpenToast={setOpenToast} status="success">
-                <Text>Success</Text>
+                <Text>Personal summaru updated</Text>
             </ToastPopover>
         </Box>
     );

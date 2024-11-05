@@ -5,9 +5,10 @@ import React, { useState } from "react";
 import { applicantSetting } from "../../../../../_common/data/setting-list";
 import { useForm, useFieldArray, Controller } from "react-hook-form";
 import { yearList } from "../../../../../_common/data/date-data";
+import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantEducation = () => {
-    const { register, handleSubmit, control, watch, reset } = useForm({
+    const { register, handleSubmit, getValues, control, watch, reset } = useForm({
         defaultValues: applicantSetting,
     });
     const { fields, append, remove } = useFieldArray({
@@ -15,8 +16,16 @@ const ApplicantEducation = () => {
         name: "education",
     });
     const [openDialogIndex, setOpenDialogIndex] = useState<number | null>(null);
+    const [openToast, setOpenToast] = useState(false);
 
     const educations = watch("education");
+
+    const handleManualSave = () => {
+        const formData = getValues();
+        console.log("Manually saving data:", formData);
+        setOpenToast(true);
+        setOpenDialogIndex(null);
+    };
 
     const onSubmit = (data) => {
         console.log("Form data:", data);
@@ -127,7 +136,9 @@ const ApplicantEducation = () => {
                                         </Text>
 
                                         <Flex gap="3">
-                                            <Button type="submit">Save</Button>
+                                            <Button type="submit" onClick={() => handleManualSave()}>
+                                                Save
+                                            </Button>
 
                                             <Button
                                                 variant="soft"
@@ -170,6 +181,10 @@ const ApplicantEducation = () => {
                     Add New Education
                 </Button>
             </form>
+
+            <ToastPopover openToast={openToast} setOpenToast={setOpenToast} status="success">
+                <Text>Education updated</Text>
+            </ToastPopover>
         </Box>
     );
 };
