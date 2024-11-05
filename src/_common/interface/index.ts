@@ -3,6 +3,7 @@ export interface IUser {
     username: string;
     emailAddress: string;
     password: string;
+    role: string;
 }
 
 export interface IApplicantSetting {
