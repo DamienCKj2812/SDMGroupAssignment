@@ -19,11 +19,16 @@ export const pagesOptions = {
         },
         {
             id: 2,
+            label: "Explore Companies",
+            path: "/applicant/companies",
+        },
+        {
+            id: 3,
             label: "Profile",
             path: "/applicant/profile",
         },
         {
-            id: 3,
+            id: 4,
             label: "Meetings",
             path: "/meeting/schedule-meeting",
         },

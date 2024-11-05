@@ -22,9 +22,21 @@ export const protectedRoutes = [
     },
     {
         category: "applicant",
+        name: "companies",
+        path: "applicant/companies",
+        element: withLazyComponent(React.lazy(() => import("../pages/applicants/explore-companies/companies/view"))),
+    },
+    {
+        category: "applicant",
         name: "company-details",
         path: "applicant/company/:companyId",
         element: withLazyComponent(React.lazy(() => import("../pages/applicants/explore-companies/company-details/view"))),
+    },
+    {
+        category: "applicant",
+        name: "review-company",
+        path: "applicant/review-company/:companyId",
+        element: withLazyComponent(React.lazy(() => import("../pages/applicants/review-company/view"))),
     },
     {
         category: "employer",

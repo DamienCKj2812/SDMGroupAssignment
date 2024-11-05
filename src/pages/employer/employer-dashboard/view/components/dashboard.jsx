@@ -1,18 +1,18 @@
-import React from "react";
-import "../style.css";
+import React from 'react';
+import '../style.css';
 
 const Dashboard = () => {
-    return (
-        <div className="container">
-            <header className="header">
-                <nav className="nav">
-                    {["Home", "Jobs", "Products", "Hiring Advice", "Market Insights"].map((item) => (
-                        <a href="#" key={item}>
-                            {item}
-                        </a>
-                    ))}
-                </nav>
-            </header>
+  return (
+    <div className="container">
+      <header className="header">
+        <nav className="nav">
+          <a href="#">Home</a>
+          <a href="#">Jobs</a>
+          <a href="#">Products</a>
+          <a href="#">Hiring Advice</a>
+          <a href="#">Market Insights</a>
+        </nav>
+      </header>
 
             <div className="content">
                 <div className="search-container">
@@ -22,15 +22,15 @@ const Dashboard = () => {
 
                 <h1 className="title">Find the best person for your role</h1>
 
-                <div className="cards">
-                    <div className="card">
-                        <h2>Create a job ad</h2>
-                        <p>Create a job ad that will attract the best candidates for your role.</p>
-                        <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                        </svg>
-                        <button className="card-button">Create job ad</button>
-                    </div>
+        <div className="cards">
+          <div className="card">
+            <h2>Create a job ad</h2>
+            <p>Create a job ad that will attract the best candidates for your role.</p>
+            <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+            </svg>
+            <button className="card-button">Create job ad</button>
+          </div>
 
                     <div className="card">
                         <h2>Choose your ad type</h2>

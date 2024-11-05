@@ -83,8 +83,8 @@ export interface IJob {
 }
 
 export interface IReview {
-    userId: number;
-    roleInCompany: string;
+    id: number;
+    position: string;
     title: string;
     goodThings: string;
     challenges: string;

@@ -43,3 +43,72 @@
 #company-details .company-profile-container h1 {
     font-size: 23px;
 }
+
+/* company-about */
+#company-about p {
+    font-size: 20px;
+}
+
+#company-about strong {
+    font-size: 17px;
+}
+
+/* company-jobs */
+#company-jobs .jobs-count strong {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#company-jobs .job-card {
+    border: 3px solid var(--gray-400);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#company-jobs .job-card:hover {
+    color: white;
+    background: black;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#company-jobs .job-card:hover label {
+    color: var(--gray-400);
+}
+
+/* company-reviews */
+#company-reviews .review-overview-card {
+    border: 3px solid var(--gray-400);
+    padding: 20px 40px;
+    border-radius: 14px;
+}
+
+#company-reviews .review-overview-card h1 {
+    font-size: 27px;
+}
+
+#company-reviews .review-overview-card strong {
+    font-size: 16px;
+}
+
+#company-reviews .review-overview-card p {
+    font-size: 16px;
+}
+
+#company-reviews .user-review-card {
+    border: 3px solid var(--gray-400);
+    padding: 20px;
+    border-radius: 14px;
+}
+
+#company-reviews .user-review-card p {
+    font-size: 18px;
+}
+
+#company-reviews .user-review-card strong {
+    font-size: 16px;
+}
+
+#company-reviews .user-review-card h1 {
+    font-size: 22px;
+}
