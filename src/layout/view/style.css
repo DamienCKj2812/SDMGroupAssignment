@@ -33,6 +33,11 @@
     padding: 10px;
 }
 
+#user-option-popover .option:hover {
+    background: black;
+    color: white;
+}
+
 #user-option-popover .option.danger {
     color: red;
 }

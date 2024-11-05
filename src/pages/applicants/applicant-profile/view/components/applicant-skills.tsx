@@ -8,7 +8,7 @@ import { suggestedSkillData } from "../../data/suggested-data";
 import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantSkills = () => {
-    const { register, handleSubmit, control, watch, reset, getValues } = useForm({
+    const { handleSubmit, control, watch, reset, getValues } = useForm({
         defaultValues: applicantSetting,
     });
     const [newSkill, setNewSkill] = useState("");

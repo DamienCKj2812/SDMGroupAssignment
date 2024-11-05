@@ -13,7 +13,9 @@ const ApplicantHeader = () => {
 
     return (
         <Flex justify="between" align="center" id="layout-header">
-            <Heading mr="6" onClick={() =>  navigate("/")} style={{cursor: "pointer"}}>Job Finder</Heading>
+            <Heading mr="6" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
+                Job Finder
+            </Heading>
 
             <Flex align="center">
                 <Flex gap="5" className="page-options">
@@ -36,6 +38,21 @@ const ApplicantHeader = () => {
                     </Popover.Trigger>
                     <Popover.Content width="200px" id="user-option-popover">
                         <Flex direction="column">
+                            <Text as="p" m="0" className="option" onClick={() => navigate("../applicant/job-search")}>
+                                Job search
+                            </Text>
+                            <Text as="p" m="0" className="option" onClick={() => navigate("../applicant/companies")}>
+                                Explore Companies
+                            </Text>
+                            <Text as="p" m="0" className="option" onClick={() => navigate("../applicant/profile")}>
+                                Profile
+                            </Text>
+                            <Text as="p" m="0" className="option" onClick={() => navigate("../meeting/schedule-meeting")}>
+                                Meetings
+                            </Text>
+                            <Text as="p" m="0" className="option" onClick={() => navigate("../applied-jobs/jobs")}>
+                                Applied Jobs
+                            </Text>
                             <Text as="p" m="0" className="option danger" onClick={() => setCurrentUser(null)}>
                                 Logout
                             </Text>
