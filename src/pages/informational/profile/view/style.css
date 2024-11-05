@@ -1,5 +1,5 @@
 #profile-view .panel{
-    background-color:#051a49;
+    background-color:#1B1212;
     padding: 20px;
     color: white;
     flex-direction:column;
@@ -36,8 +36,9 @@
 #profile-view .inside-panel button{
     width:150px;
     height:50px;
-    background-color:#e60278;
+    background-color:#efefef;
     font-size:15px;
+    color:black;
 }
 
 #profile-view .inside-panel .imagess {
@@ -64,7 +65,7 @@
     border-radius:10px;
     padding:10px;
     font-weight:bold;
-    border: 3px solid #e60278;
+    border: 3px solid #1B1212;
 }
 
 #profile-view .panel2{
@@ -97,7 +98,7 @@
 #profile-view .panel2 .hiring-container{
     text-align: center;
     margin: 0 auto; /* Center-aligns the container */
-    background-color:#f3f5f7;
+    background-color:#efefef;
     width: 60%; /* Center and control width */
     display: flex;
     justify-content: center;
@@ -107,7 +108,7 @@
 
 #profile-view .panel2 .hiring-container button{
     gap:30px;
-    background-color:#f3f5f7;
+    background-color:#efefef;
     color:black;
     border: 2px solid black;
     padding:20px;
