@@ -74,4 +74,10 @@ export const protectedRoutes = [
         path: "meeting/schedule-meeting",
         element: withLazyComponent(React.lazy(() => import("../pages/_shared/schedule-meeting/view"))),
     },
+    {
+        category: "company",
+        name: "dashboard",
+        path: "dashboard",
+        element: withLazyComponent(React.lazy(() => import("../pages/company/dashboard/view"))),
+    },
 ];

@@ -33,6 +33,9 @@ function App() {
             if (userRole === "applicant") {
                 return <Navigate to="applicant/job-search" replace />;
             }
+            if (userRole === "admin") {
+                return <Navigate to="/dashboard" replace />;
+            }
         }
         return <Navigate to="/home" replace />;
     };

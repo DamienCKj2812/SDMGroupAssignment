@@ -1,0 +1,17 @@
+#dashboard .card {
+    border: 2px solid var(--interactive-hover);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#dashboard .card label {
+    font-size: 14px;
+}
+
+#dashboard .rt-TableHeader {
+    border-bottom: 1px solid white;
+}
+
+#dashboard .rt-TableRow {
+    color: white;
+}

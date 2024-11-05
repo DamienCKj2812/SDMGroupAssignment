@@ -72,4 +72,11 @@ export const pagesOptions = {
             path: "/meeting/schedule-meeting",
         },
     ],
+    admin: [
+        {
+            id: 1,
+            label: "Dashboard",
+            path: "/dashboard",
+        },
+    ],
 };

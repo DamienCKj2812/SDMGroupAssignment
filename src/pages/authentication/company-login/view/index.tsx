@@ -4,13 +4,12 @@ import { useForm } from "react-hook-form";
 import "./style.css";
 import { companyUser } from "../../../../_common/data/users-list";
 import { useRecoilState } from "recoil";
-import { currentLoggedInUserState, userRoleState } from "../../../../_common/state";
+import { currentLoggedInUserState } from "../../../../_common/state";
 import { useNavigate } from "react-router-dom";
 
 const CompanyLogin = () => {
     const navigate = useNavigate();
     const [, setUser] = useRecoilState(currentLoggedInUserState);
-    const [, setUserRole] = useRecoilState(userRoleState);
 
     const {
         register,

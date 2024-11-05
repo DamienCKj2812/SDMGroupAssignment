@@ -5,6 +5,9 @@ import { currentLoggedInUserState, userRoleState } from "../../../../_common/sta
 import ApplicantGuestHeader from "./applicant-guest-header";
 import EmployerHeader from "./employer-header";
 import ApplicantHeader from "./applicant-header";
+import StaffHeader from "./staff-header";
+import ManagerHeader from "./manager-header";
+import AdminHeader from "./admin-header";
 
 const LayoutHeader = () => {
     const [currentUserRole] = useRecoilState(userRoleState);
@@ -13,6 +16,9 @@ const LayoutHeader = () => {
     if (currentUser) {
         if (currentUserRole == "employer") return <EmployerHeader />;
         if (currentUserRole == "applicant") return <ApplicantHeader />;
+        if (currentUserRole == "staff") return <StaffHeader />;
+        if (currentUserRole == "admin") return <AdminHeader />;
+        if (currentUserRole == "manager") return <ManagerHeader />;
     }
 
     if (currentUserRole == "employer") return <EmployerGuestHeader />;
