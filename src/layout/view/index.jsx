@@ -22,7 +22,7 @@ const MainLayout = () => {
             <ScrollArea
                 style={{ height: "calc(100vh - 60px)" }}
                 id="layout-scroll-area"
-                className={`${userRole == "admin" || currentUser == "manager" || currentUser == "staff" ? "dark-theme-layout" : ""} `}
+                className={`${userRole == "admin" || userRole == "manager" || userRole == "staff" ? "dark-theme-layout" : ""} `}
             >
                 <Box>
                     <Outlet />

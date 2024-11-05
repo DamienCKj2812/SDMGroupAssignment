@@ -36,6 +36,9 @@ function App() {
             if (userRole === "admin") {
                 return <Navigate to="/dashboard" replace />;
             }
+            if (userRole === "admin" || userRole === "manager") {
+                return <Navigate to="/dashboard" replace />;
+            }
         }
         return <Navigate to="/home" replace />;
     };
