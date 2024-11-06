@@ -14,8 +14,11 @@
     --gray-700: #5a6881;
     --primary-color: #111214;
 
-    --interactive-default: hsla(0, 0%, 50%, 0.5);
-    --interactive-active: #111214;
+    --black-700: #111113;
+
+    --interactive-active: #ffffff;
+    --interactive-hover: #dbdee1;
+    --interactive-default: #645e6d;
 
     --registration-form-background: #f7f8fb;
 

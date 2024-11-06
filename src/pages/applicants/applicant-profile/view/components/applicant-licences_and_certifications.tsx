@@ -5,9 +5,10 @@ import React, { useState } from "react";
 import { applicantSetting } from "../../../../../_common/data/setting-list";
 import { useForm, useFieldArray, Controller } from "react-hook-form";
 import { monthList, yearList } from "../../../../../_common/data/date-data";
+import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantLicenseAndCertificants = () => {
-    const { register, handleSubmit, control, watch, reset } = useForm({
+    const { register, handleSubmit, control, watch, reset, getValues } = useForm({
         defaultValues: applicantSetting,
     });
     const { fields, append, remove } = useFieldArray({
@@ -15,11 +16,19 @@ const ApplicantLicenseAndCertificants = () => {
         name: "license",
     });
     const [openDialogIndex, setOpenDialogIndex] = useState<number | null>(null);
+    const [openToast, setOpenToast] = useState(false);
 
     const licenses = watch("license");
 
     const onSubmit = (data) => {
         console.log("Form data:", data);
+    };
+
+    const handleManualSave = () => {
+        const formData = getValues();
+        console.log("Manually saving data:", formData);
+        setOpenToast(true);
+        setOpenDialogIndex(null);
     };
 
     return (
@@ -185,7 +194,9 @@ const ApplicantLicenseAndCertificants = () => {
                                         </Text>
 
                                         <Flex gap="3">
-                                            <Button type="submit">Save</Button>
+                                            <Button type="submit" onClick={() => handleManualSave()}>
+                                                Save
+                                            </Button>
 
                                             <Button
                                                 variant="soft"
@@ -235,6 +246,10 @@ const ApplicantLicenseAndCertificants = () => {
                     Add license or certification
                 </Button>
             </form>
+
+            <ToastPopover openToast={openToast} setOpenToast={setOpenToast} status="success">
+                <Text>License / certifications updated</Text>
+            </ToastPopover>
         </Box>
     );
 };

@@ -15,11 +15,11 @@ function getPastNDays(n) {
 }
 
 const graphOptions = {
-    grid: { 
-        top: '12%', 
-        right: "1px", 
-        bottom: "10%", 
-        left: "100px", 
+    grid: {
+        top: "12%",
+        right: "1px",
+        bottom: "10%",
+        left: "100px",
     },
     title: {
         text: "Job Applications Overview",
@@ -31,7 +31,15 @@ const graphOptions = {
     },
     xAxis: {
         type: "category",
-        data: ["Software Engineer", "Marketing Manager", "UX Designer", "DevOps Engineer", "Full Stack Developer", "Data Scientist", "Product Manager"]
+        data: [
+            "Software Engineer",
+            "Marketing Manager",
+            "UX Designer",
+            "DevOps Engineer",
+            "Full Stack Developer",
+            "Data Scientist",
+            "Product Manager",
+        ],
     },
     yAxis: {
         type: "value",
@@ -65,47 +73,46 @@ const graphOptions = {
     ],
 };
 
-
 const lineChart = {
-grid: { 
-    top: '13%', 
-    right: "1px", 
-    bottom: "15%", 
-    left: "100px",
-},
-title: {
-    text: "Interactions",
-    subtext: "Last 7 Days",
-    left: "center",
-},
-xAxis: {
-    type: 'category',
-    data: getPastNDays(7),
-},
-yAxis: {
-    type: 'value',
-    name: "Clicks",
-},
-series: [
-    {
-    data: [820, 932, 901, 934, 1290, 1330, 1320],
-    type: 'line',
-    itemStyle: {
-    color: "#1B1212",
-    }
-    //smooth: false;
+    grid: {
+        top: "13%",
+        right: "1px",
+        bottom: "15%",
+        left: "100px",
     },
-],
-tooltip: {
-    trigger: 'axis',
-},
+    title: {
+        text: "Interactions",
+        subtext: "Last 7 Days",
+        left: "center",
+    },
+    xAxis: {
+        type: "category",
+        data: getPastNDays(7),
+    },
+    yAxis: {
+        type: "value",
+        name: "Clicks",
+    },
+    series: [
+        {
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: "line",
+            itemStyle: {
+                color: "#1B1212",
+            },
+            //smooth: false;
+        },
+    ],
+    tooltip: {
+        trigger: "axis",
+    },
 };
 
 const PieChart = {
-    // grid: { 
-    //     top: '13%', 
-    //     right: "1px", 
-    //     bottom: "15%", 
+    // grid: {
+    //     top: '13%',
+    //     right: "1px",
+    //     bottom: "15%",
     //     left: "10px",
     // },
     title: {
@@ -113,61 +120,60 @@ const PieChart = {
         subtext: new Date().toLocaleString('default', { month: 'long' }),
         left: "center",
     },
+    title: {},
     legend: {
-      top: 'bottom'
+        top: "bottom",
     },
     toolbox: {
-      show: true,
-      feature: {
-        mark: { show: true },
-        dataView: { show: true, readOnly: false },
-        restore: { show: true },
-        saveAsImage: { show: true }
-      }
+        show: true,
+        feature: {
+            mark: { show: true },
+            dataView: { show: true, readOnly: false },
+            restore: { show: true },
+            saveAsImage: { show: true },
+        },
     },
     series: [
-      {
-        name: 'Nightingale Chart',
-        type: 'pie',
-        radius: [50, 200],
-        center: ['50%', '50%'],
-        roseType: 'area',
-        itemStyle: {
-          borderRadius: 8
+        {
+            name: "Nightingale Chart",
+            type: "pie",
+            radius: [50, 250],
+            center: ["50%", "50%"],
+            roseType: "area",
+            itemStyle: {
+                borderRadius: 8,
+            },
+            data: [
+                { value: 40, name: "rose 1" },
+                { value: 38, name: "rose 2" },
+                { value: 32, name: "rose 3" },
+                { value: 30, name: "rose 4" },
+                { value: 28, name: "rose 5" },
+                { value: 26, name: "rose 6" },
+                { value: 22, name: "rose 7" },
+                { value: 18, name: "rose 8" },
+            ],
         },
-        data: [
-          { value: 40, name: 'rose 1' },
-          { value: 38, name: 'rose 2' },
-          { value: 32, name: 'rose 3' },
-          { value: 30, name: 'rose 4' },
-          { value: 28, name: 'rose 5' },
-          { value: 26, name: 'rose 6' },
-          { value: 22, name: 'rose 7' },
-          { value: 18, name: 'rose 8' }
-        ]
-      }
-    ]
-  };
+    ],
+};
 
 const EmployerDashboard = () => {
     return (
         <Flex justify="center" direction="column">
             <Dashboard />
             <Flex gap="1">
-                <Box width="43%" height="600px">
-
-                    <Box width="100%" height="270px" >
-                        <  ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "300px", width: "110%" }} />
+                <Box width="40%" height="600px">
+                    <Box width="100%" height="270px">
+                        <ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "250px", width: "110%" }} />
                     </Box>
-                    <Box width="100%" height="250px" mt ="9">
-                        <   ReactECharts option={lineChart} notMerge={true} lazyUpdate={true} style={{ height: "250px", width: "110%" }} />
-                    </Box>    
+                    <Box width="100%" height="250px">
+                        <ReactECharts option={lineChart} notMerge={true} lazyUpdate={true} style={{ height: "250px", width: "110%" }} />
+                    </Box>
                 </Box>
 
-                <Box width="100%" height="600px" >
-                <   ReactECharts option={PieChart} notMerge={true} lazyUpdate={true} style={{ height: "95%", width: "95%" }} />
+                <Box width="100%" height="600px">
+                    <ReactECharts option={PieChart} notMerge={true} lazyUpdate={true} style={{ height: "95%", width: "100%" }} />
                 </Box>
-                
             </Flex>
 
             {/* <Box maxWidth="400%">
@@ -193,11 +199,7 @@ const EmployerDashboard = () => {
                     </RadioCards.Root>
                 </Box>
              */}
-
-
         </Flex>
-
-        
     );
 };
 

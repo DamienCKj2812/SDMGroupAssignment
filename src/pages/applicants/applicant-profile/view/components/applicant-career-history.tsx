@@ -5,9 +5,10 @@ import React, { useState } from "react";
 import { applicantSetting } from "../../../../../_common/data/setting-list";
 import { useForm, useFieldArray, Controller } from "react-hook-form";
 import { monthList, yearList } from "../../../../../_common/data/date-data";
+import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantCareerHistory = () => {
-    const { register, handleSubmit, control, watch, reset } = useForm({
+    const { register, handleSubmit, control, watch, reset, getValues } = useForm({
         defaultValues: applicantSetting,
     });
     const { fields, append, remove } = useFieldArray({
@@ -15,11 +16,20 @@ const ApplicantCareerHistory = () => {
         name: "role",
     });
     const [openDialogIndex, setOpenDialogIndex] = useState<number | null>(null);
+    const [openToast, setOpenToast] = useState(false);
 
     const roles = watch("role");
 
     const onSubmit = (data) => {
         console.log("Form data:", data);
+        setOpenToast(true);
+    };
+
+    const handleManualSave = () => {
+        const formData = getValues();
+        console.log("Manually saving data:", formData);
+        setOpenToast(true);
+        setOpenDialogIndex(null);
     };
 
     return (
@@ -27,11 +37,11 @@ const ApplicantCareerHistory = () => {
             <Heading as="h1" m="0">
                 Career history
             </Heading>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                {fields.map((field, index) => {
-                    const role = roles[index] || {};
+            {fields.map((field, index) => {
+                const role = roles[index] || {};
 
-                    return (
+                return (
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <Flex justify="between" className="input-container" key={field.id}>
                             {!role.companyName &&
                             !role.jobTitle &&
@@ -186,7 +196,9 @@ const ApplicantCareerHistory = () => {
                                         </Text>
 
                                         <Flex gap="3">
-                                            <Button type="submit">Save</Button>
+                                            <Button type="submit" onClick={() => handleManualSave()}>
+                                                Save
+                                            </Button>
 
                                             <Button
                                                 variant="soft"
@@ -212,31 +224,35 @@ const ApplicantCareerHistory = () => {
                                 </Dialog.Content>
                             </Dialog.Root>
                         </Flex>
-                    );
-                })}
+                    </form>
+                );
+            })}
 
-                <Button
-                    mt="4"
-                    onClick={() =>
-                        append({
-                            jobTitle: "",
-                            companyName: "",
-                            started: {
-                                month: "",
-                                year: "",
-                            },
-                            ended: {
-                                month: "",
-                                year: "",
-                            },
-                            stillInRole: false,
-                            description: "",
-                        })
-                    }
-                >
-                    Add New Role
-                </Button>
-            </form>
+            <Button
+                mt="4"
+                onClick={() =>
+                    append({
+                        jobTitle: "",
+                        companyName: "",
+                        started: {
+                            month: "",
+                            year: "",
+                        },
+                        ended: {
+                            month: "",
+                            year: "",
+                        },
+                        stillInRole: false,
+                        description: "",
+                    })
+                }
+            >
+                Add New Role
+            </Button>
+
+            <ToastPopover openToast={openToast} setOpenToast={setOpenToast} status="success">
+                <Text>Career updated</Text>
+            </ToastPopover>
         </Box>
     );
 };

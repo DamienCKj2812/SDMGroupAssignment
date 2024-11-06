@@ -5,17 +5,25 @@ import React, { useState } from "react";
 import { applicantSetting } from "../../../../../_common/data/setting-list";
 import { useForm, Controller } from "react-hook-form";
 import { suggestedLanguagesData } from "../../data/suggested-data";
+import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantLanguage = () => {
-    const { handleSubmit, control, watch, reset } = useForm({
+    const { handleSubmit, control, watch, reset, getValues } = useForm({
         defaultValues: applicantSetting,
     });
     const [newLanguage, setNewLanguage] = useState("");
+    const [openToast, setOpenToast] = useState(false);
 
     const languages = watch("languages");
 
     const onSubmit = (data) => {
         console.log("Form data:", data);
+    };
+
+    const handleManualSave = () => {
+        const formData = getValues();
+        console.log("Manually saving data:", formData);
+        setOpenToast(true);
     };
 
     return (
@@ -128,7 +136,11 @@ const ApplicantLanguage = () => {
                             </Text>
 
                             <Flex gap="3">
-                                <Button type="submit">Save</Button>
+                                <Dialog.Close>
+                                    <Button type="submit" onClick={() => handleManualSave()}>
+                                        Save
+                                    </Button>
+                                </Dialog.Close>
 
                                 <Button
                                     variant="soft"
@@ -143,6 +155,10 @@ const ApplicantLanguage = () => {
                     </Dialog.Content>
                 </Dialog.Root>
             </form>
+
+            <ToastPopover openToast={openToast} setOpenToast={setOpenToast} status="success">
+                <Text>Languages updated</Text>
+            </ToastPopover>
         </Flex>
     );
 };

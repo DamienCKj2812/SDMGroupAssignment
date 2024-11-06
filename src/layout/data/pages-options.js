@@ -32,6 +32,11 @@ export const pagesOptions = {
             label: "Meetings",
             path: "/meeting/schedule-meeting",
         },
+        {
+            id: 5,
+            label: "Applied Jobs",
+            path: "/applied-jobs/jobs",
+        },
     ],
     employerGuest: [
         {
@@ -65,6 +70,13 @@ export const pagesOptions = {
             id: 4,
             label: "Meetings",
             path: "/meeting/schedule-meeting",
+        },
+    ],
+    admin: [
+        {
+            id: 1,
+            label: "Dashboard",
+            path: "/dashboard",
         },
     ],
 };

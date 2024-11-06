@@ -5,17 +5,25 @@ import React, { useState } from "react";
 import { applicantSetting } from "../../../../../_common/data/setting-list";
 import { useForm, Controller } from "react-hook-form";
 import { suggestedSkillData } from "../../data/suggested-data";
+import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantSkills = () => {
-    const { register, handleSubmit, control, watch, reset } = useForm({
+    const { handleSubmit, control, watch, reset, getValues } = useForm({
         defaultValues: applicantSetting,
     });
     const [newSkill, setNewSkill] = useState("");
+    const [openToast, setOpenToast] = useState(false);
 
     const skills = watch("skills");
 
     const onSubmit = (data) => {
         console.log("Form data:", data);
+    };
+
+    const handleManualSave = () => {
+        const formData = getValues();
+        console.log("Manually saving data:", formData);
+        setOpenToast(true);
     };
 
     return (
@@ -25,13 +33,15 @@ const ApplicantSkills = () => {
             </Heading>
 
             <Flex gap="2" wrap="wrap" maxWidth="700px" width="100%">
-                {skills.length > 0 ? skills.map((s) => {
-                    return (
-                        <Text as="p" m="0" key={s} className="added-skill-container">
-                            {s}
-                        </Text>
-                    );
-                }) : (
+                {skills.length > 0 ? (
+                    skills.map((s) => {
+                        return (
+                            <Text as="p" m="0" key={s} className="added-skill-container">
+                                {s}
+                            </Text>
+                        );
+                    })
+                ) : (
                     <Text>You got no skill</Text>
                 )}
             </Flex>
@@ -131,7 +141,11 @@ const ApplicantSkills = () => {
                             </Text>
 
                             <Flex gap="3">
-                                <Button type="submit">Save</Button>
+                                <Dialog.Close>
+                                    <Button type="submit" onClick={() => handleManualSave()}>
+                                        Save
+                                    </Button>
+                                </Dialog.Close>
 
                                 <Button
                                     variant="soft"
@@ -146,6 +160,10 @@ const ApplicantSkills = () => {
                     </Dialog.Content>
                 </Dialog.Root>
             </form>
+
+            <ToastPopover openToast={openToast} setOpenToast={setOpenToast} status="success">
+                <Text>Skills updated</Text>
+            </ToastPopover>
         </Flex>
     );
 };

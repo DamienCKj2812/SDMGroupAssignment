@@ -4,22 +4,28 @@ import { pagesOptions } from "../../../data/pages-options";
 import "../../style.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { currentLoggedInUserState } from "../../../../_common/state";
+import { currentLoggedInUserState, userRoleState } from "../../../../_common/state";
 
-const ApplicantHeader = () => {
+const StaffHeader = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [currentUser, setCurrentUser] = useRecoilState(currentLoggedInUserState);
+    const [userRole] = useRecoilState(userRoleState);
 
     return (
-        <Flex justify="between" align="center" id="layout-header">
+        <Flex
+            justify="between"
+            align="center"
+            id="layout-header"
+            className={`${userRole == "admin" || userRole == "manager" || userRole == "staff" ? "dark-theme-header" : ""} `}
+        >
             <Heading mr="6" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
-                Job Finder
+                Staff
             </Heading>
 
             <Flex align="center">
                 <Flex gap="5" className="page-options">
-                    {pagesOptions.applicant.map((g) => {
+                    {pagesOptions.employer.map((g) => {
                         return (
                             <Box key={g.id} onClick={() => navigate(g.path)} className={`option ${location.pathname == g.path ? "selected" : ""}`}>
                                 <Text>{g.label}</Text>
@@ -38,21 +44,6 @@ const ApplicantHeader = () => {
                     </Popover.Trigger>
                     <Popover.Content width="200px" id="user-option-popover">
                         <Flex direction="column">
-                            <Text as="p" m="0" className="option" onClick={() => navigate("../applicant/job-search")}>
-                                Job search
-                            </Text>
-                            <Text as="p" m="0" className="option" onClick={() => navigate("../applicant/companies")}>
-                                Explore Companies
-                            </Text>
-                            <Text as="p" m="0" className="option" onClick={() => navigate("../applicant/profile")}>
-                                Profile
-                            </Text>
-                            <Text as="p" m="0" className="option" onClick={() => navigate("../meeting/schedule-meeting")}>
-                                Meetings
-                            </Text>
-                            <Text as="p" m="0" className="option" onClick={() => navigate("../applied-jobs/jobs")}>
-                                Applied Jobs
-                            </Text>
                             <Text as="p" m="0" className="option danger" onClick={() => setCurrentUser(null)}>
                                 Logout
                             </Text>
@@ -64,4 +55,4 @@ const ApplicantHeader = () => {
     );
 };
 
-export default ApplicantHeader;
+export default StaffHeader;

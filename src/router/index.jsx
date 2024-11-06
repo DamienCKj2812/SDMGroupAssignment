@@ -10,9 +10,20 @@ function getPublicRoutes() {
 }
 
 function getProtectedRoutes(type) {
-    return protectedRoutes.map((route) => {
-        if (route.category == type) return <Route key={route.path} path={route.path} element={route.element} />;
-    });
+    console.log(type);
+    return protectedRoutes
+        .filter((route) => {
+            // Check if the route is in the "company" category for admin, manager, or staff
+            if ((type === "admin" || type === "manager" || type === "staff") && route.category === "company") {
+                return true;
+            }
+            // Check if the route's category matches the `type`
+            if (route.category === type) {
+                return true;
+            }
+            return false;
+        })
+        .map((route) => <Route key={route.path} path={route.path} element={route.element} />);
 }
 
 export { getPublicRoutes, getProtectedRoutes };

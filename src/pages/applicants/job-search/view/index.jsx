@@ -19,20 +19,19 @@ const JobSearch = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (filterIndustries.length > 0 || filterKeyword) {
-            const filteredCompanies = companyList.filter((c) => {
-                const matchesIndustry = filterIndustries.includes(c.about.industry);
-                const matchesKeyword = c.name.toLowerCase().includes(filterKeyword.toLowerCase());
-                return matchesIndustry && matchesKeyword;
-            });
-
-            const companyIds = filteredCompanies.map((c) => c.companyId);
-
-            setJobs(jobList.filter((j) => companyIds.includes(j.companyId)));
+        if (filterKeyword) {
+            const filteredJobs = jobList.filter((j) => j.position.toLowerCase().includes(filterKeyword.toLowerCase()));
+            console.log(filteredJobs);
+            setJobs(filteredJobs);
+        } else if (filterIndustries.length > 0) {
+            const companyIds = companyList.filter((c) => filterIndustries.includes(c.about.industry)).map((c) => c.companyId);
+            const filteredJobs = jobList.filter((j) => companyIds.includes(j.companyId));
+            setJobs(filteredJobs);
         } else {
+            // Default jobs if no filters are set
             setJobs(jobList);
         }
-    }, [filterIndustries, filterKeyword]);
+    }, [filterKeyword, filterIndustries]);
 
     useEffect(() => {
         const sections = document.querySelectorAll(".company-details-container");

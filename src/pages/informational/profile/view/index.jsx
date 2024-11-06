@@ -1,8 +1,10 @@
 import { Box, Flex, Button } from "@radix-ui/themes";
 import "./style.css";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+    const navigate = useNavigate();
     return (
         <Box id="profile-view">
             <Flex>
@@ -84,7 +86,7 @@ const Profile = () => {
                 <Box className="hiring-container">
                     <Flex>
                         <h1>Hiring? Your job ad seen by all the right people </h1>
-                        <Button mt="5" ml="6">
+                        <Button mt="5" ml="6" onClick={() => navigate("/home")}>
                             Employer site
                         </Button>
                     </Flex>

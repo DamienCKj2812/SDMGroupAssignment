@@ -22,6 +22,12 @@ export const publicRoutes = [
     },
     {
         category: "authentication",
+        name: "company-login",
+        path: "/company-login",
+        element: withLazyComponent(React.lazy(() => import("../pages/authentication/company-login/view/"))),
+    },
+    {
+        category: "authentication",
         name: "register",
         path: "/register",
         element: withLazyComponent(React.lazy(() => import("../pages/authentication/register/view/"))),

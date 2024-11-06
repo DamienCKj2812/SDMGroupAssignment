@@ -9,6 +9,11 @@
     font-size: 18px;
 }
 
+.dark-theme-layout {
+    background-color: var(--black-700);
+    color: white;
+}
+
 #layout-header button {
     cursor: pointer;
 }
@@ -16,12 +21,27 @@
 #layout-header .page-options .option {
     cursor: pointer;
     padding: 2px;
-    color: var(--interactive-default);
+    color: black;
 }
 
 #layout-header .page-options .option.selected {
-    border-bottom: 2px solid var(--interactive-active);
-    color: var(--interactive-active);
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+#layout-header.dark-theme-header {
+    background-color: var(--black-700);
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#layout-header.dark-theme-header .option {
+    color: var(--gray-500) !important;
+}
+
+#layout-header.dark-theme-header .option.selected {
+    border-bottom: 2px solid white;
+    color: white !important;
 }
 
 #user-option-popover {
@@ -33,6 +53,11 @@
     padding: 10px;
 }
 
+#user-option-popover .option:hover {
+    background: black;
+    color: white;
+}
+
 #user-option-popover .option.danger {
     color: red;
 }
@@ -40,4 +65,17 @@
 #user-option-popover .option.danger:hover {
     color: white;
     background: red;
+}
+
+#company-entry p {
+    visibility: hidden; /* Hide the element */
+    opacity: 0; /* Make it transparent */
+    transition: visibility 0s 0.3s, opacity 0.3s linear; /* Delay visibility change */
+}
+
+#company-entry:hover p {
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Make it opaque */
+    transition-delay: 0s; /* Remove delay for showing */
+    cursor: pointer;
 }

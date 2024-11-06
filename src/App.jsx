@@ -18,7 +18,7 @@ function App() {
             } else if (employerList.some((u) => u.userId == currentUser.userId)) {
                 setUserRole("employer");
             } else if (companyUser.some((u) => u.userId == currentUser.userId)) {
-                setUserRole("company");
+                setUserRole(currentUser.role);
             }
         } else {
             setUserRole("applicant");
@@ -32,6 +32,12 @@ function App() {
             }
             if (userRole === "applicant") {
                 return <Navigate to="applicant/job-search" replace />;
+            }
+            if (userRole === "admin") {
+                return <Navigate to="/dashboard" replace />;
+            }
+            if (userRole === "admin" || userRole === "manager") {
+                return <Navigate to="/dashboard" replace />;
             }
         }
         return <Navigate to="/home" replace />;

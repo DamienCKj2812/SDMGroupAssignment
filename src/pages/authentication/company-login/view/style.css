@@ -1,0 +1,27 @@
+#company-login {
+    background: black;
+    height: 100vh;
+}
+
+#company-login .login-container {
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+    width: 500px;
+}
+
+#company-login .login-container {
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+    width: 500px;
+}
+
+#company-login .login-container .login-button {
+    background: grey;
+}
+
+#company-login .login-container .login-button:hover {
+    background: black;
+    transition: background ease 0.3s
+}
