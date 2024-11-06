@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../style.css';
+
 import { useNavigate } from 'react-router-dom';
-import {Flex, ScrollArea} from "@radix-ui/themes";
+import {TextField, Flex, ScrollArea, SegmentedControl} from "@radix-ui/themes";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Dashboard = () => {
+    const [selectedNav, setSelectedNav] = useState("dashboard")
 
     const navigate = useNavigate()
   return (
@@ -16,6 +20,22 @@ const Dashboard = () => {
           <a href="#">Hiring Advice</a>
           <a href="#">Market Insights</a>
         </nav>
+        
+        <SegmentedControl.Root defaultValue="dashboard" onValueChange={setSelectedNav}>
+            {["dasboard", "drafts"].map(n => {
+                return (
+                    <SegmentedControl.Item value={n} key={n}>{n}</SegmentedControl.Item>
+                )
+            })}
+  
+        </SegmentedControl.Root>
+
+        {selectedNav == "dasboard" && (
+            <Flex>dashboard page</Flex>
+        )} 
+         {selectedNav == "drafts" && (
+            <Flex>drafts page</Flex>
+        )} 
       </header>
 
             <div className="content">
@@ -58,6 +78,11 @@ const Dashboard = () => {
                 <h2 className="title" style={{ fontSize: "1.5rem", marginTop: "2rem" }}>
                     My recent job ads
                 </h2>
+                <TextField.Root placeholder="Search the docs…">
+                    <TextField.Slot side='right'>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </TextField.Slot>
+                </TextField.Root>
                 <table className="table"><thead>
                         <tr>
                             <th>Job title</th>
