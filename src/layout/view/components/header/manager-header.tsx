@@ -25,7 +25,7 @@ const ManagerHeader = () => {
 
             <Flex align="center">
                 <Flex gap="5" className="page-options">
-                    {pagesOptions.employer.map((g) => {
+                    {pagesOptions.manager.map((g) => {
                         return (
                             <Box key={g.id} onClick={() => navigate(g.path)} className={`option ${location.pathname == g.path ? "selected" : ""}`}>
                                 <Text>{g.label}</Text>
@@ -34,6 +34,8 @@ const ManagerHeader = () => {
                     })}
                 </Flex>
             </Flex>
+
+            
 
             <Flex align="center" gap="5">
                 <Popover.Root>

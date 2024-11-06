@@ -79,4 +79,16 @@ export const pagesOptions = {
             path: "/dashboard",
         },
     ],
+    manager: [
+        {
+            id: 1,
+            label: "Dashboard",
+            path: "/dashboard",
+        },
+        {
+            id: 2,
+            label: "Reports",
+            path: "/reports",
+        },
+    ],
 };
