@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Box, Flex, RadioCards, Text } from "@radix-ui/themes";
+import { Container ,Box, Flex, RadioCards, Text } from "@radix-ui/themes";
 import Dashboard from "./components/dashboard";
 import ReactECharts from "echarts-for-react";
 
@@ -109,7 +109,9 @@ const PieChart = {
     //     left: "10px",
     // },
     title: {
-        
+        text: "Trending Search",
+        subtext: new Date().toLocaleString('default', { month: 'long' }),
+        left: "center",
     },
     legend: {
       top: 'bottom'
@@ -127,7 +129,7 @@ const PieChart = {
       {
         name: 'Nightingale Chart',
         type: 'pie',
-        radius: [50, 250],
+        radius: [50, 200],
         center: ['50%', '50%'],
         roseType: 'area',
         itemStyle: {
@@ -152,18 +154,18 @@ const EmployerDashboard = () => {
         <Flex justify="center" direction="column">
             <Dashboard />
             <Flex gap="1">
-                <Box width="40%" height="600px">
+                <Box width="43%" height="600px">
 
-                    <Box width="100%" height="270px">
-                        <  ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "250px", width: "110%" }} />
+                    <Box width="100%" height="270px" >
+                        <  ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "300px", width: "110%" }} />
                     </Box>
-                    <Box width="100%" height="250px">
+                    <Box width="100%" height="250px" mt ="9">
                         <   ReactECharts option={lineChart} notMerge={true} lazyUpdate={true} style={{ height: "250px", width: "110%" }} />
                     </Box>    
                 </Box>
 
-                <Box width="100%" height="600px">
-                <   ReactECharts option={PieChart} notMerge={true} lazyUpdate={true} style={{ height: "95%", width: "100%" }} />
+                <Box width="100%" height="600px" >
+                <   ReactECharts option={PieChart} notMerge={true} lazyUpdate={true} style={{ height: "95%", width: "95%" }} />
                 </Box>
                 
             </Flex>
