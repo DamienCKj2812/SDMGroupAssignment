@@ -81,7 +81,7 @@ const lineChart = {
     //     left: "100px",
     // },
     title: {
-        text: "Interactions",
+        text: "Ben Dover`s Interactions",
         subtext: "Last 7 Days",
         left: "center",
     },
