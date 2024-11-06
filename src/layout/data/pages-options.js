@@ -90,5 +90,15 @@ export const pagesOptions = {
             label: "Reports",
             path: "/reports",
         },
+        {
+            id: 2,
+            label: "Employer Ads",
+            path: "/employer-ads",
+        },
+        {
+            id: 3,
+            label: "Employers Profile",
+            path: "/employers-profile",
+        },
     ],
 };

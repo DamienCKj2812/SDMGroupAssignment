@@ -1,49 +1,49 @@
-#employer-ads .rt-TextFieldRoot {
+#employers-profile .rt-TextFieldRoot {
     background: black;
     border: 1px solid white;
     color: white;
 }
 
-#employer-ads .job-card {
+#employers-profile .company-card {
     border: 2px solid var(--gray-600);
     border-radius: 10px;
     color: white;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-#employer-ads .job-card:hover {
+#employers-profile .company-card:hover {
     background: var(--gray-600);
     color: black;
     border-color: white;
 }
 
-#employer-ads .job-card h1 {
+#employers-profile .company-card h1 {
     font-size: 17px;
     white-space: nowrap; /* Correct property */
     overflow: hidden; /* Ensure overflow is hidden */
     text-overflow: ellipsis;
 }
 
-#employer-ads .job-card strong {
+#employers-profile .company-card strong {
     font-size: 13px;
 }
 
-#employer-ads .job-card .button {
+#employers-profile .company-card .button {
     background: transparent;
     border: 1px solid white;
 }
 
-#employer-ads .job-card .button:hover {
+#employers-profile .company-card .button:hover {
     background: white;
     color: black;
 }
 
-#employer-ads .job-card .button.danger {
+#employers-profile .company-card .button.danger {
     border: 1px solid tomato;
     color: tomato;
 }
 
-#employer-ads .job-card .button.danger:hover {
+#employers-profile .company-card .button.danger:hover {
     background: tomato;
     color: white;
 }
