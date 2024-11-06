@@ -6,6 +6,8 @@ import LayoutHeader from "./components/header";
 import { useRecoilState } from "recoil";
 import { currentLoggedInUserState, userRoleState } from "../../_common/state";
 
+const pathWithNoMargin = ["/home", "/login", "/register", "/employer/company-profile", "/applicant/job-search"];
+
 const MainLayout = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -24,17 +26,16 @@ const MainLayout = () => {
                 id="layout-scroll-area"
                 className={`${userRole == "admin" || userRole == "manager" || userRole == "staff" ? "dark-theme-layout" : ""} `}
             >
-                <Box>
+                <Box style={{ margin: pathWithNoMargin.includes(location.pathname) ? "" : "50px 0px" }}>
                     <Outlet />
-
-                    {!currentUser && (
-                        <Box id="company-entry">
-                            <Text as="p" m="0" onClick={() => navigate(`../company-login`)}>
-                                Magic right here
-                            </Text>
-                        </Box>
-                    )}
                 </Box>
+                {!currentUser && (
+                    <Box id="company-entry">
+                        <Text as="p" m="0" onClick={() => navigate(`../company-login`)}>
+                            Magic right here
+                        </Text>
+                    </Box>
+                )}
             </ScrollArea>
         </Box>
     );

@@ -15,6 +15,12 @@ export const publicRoutes = [
         element: withLazyComponent(React.lazy(() => import("../pages/informational/profile/view"))),
     },
     {
+        category: "home",
+        name: "products",
+        path: "/products",
+        element: withLazyComponent(React.lazy(() => import("../pages/informational/products/view"))),
+    },
+    {
         category: "authentication",
         name: "login",
         path: "/login",
