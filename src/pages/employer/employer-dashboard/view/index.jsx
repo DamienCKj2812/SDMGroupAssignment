@@ -15,12 +15,7 @@ function getPastNDays(n) {
 }
 
 const graphOptions = {
-    // grid: {
-    //     top: "12%",
-    //     right: "1px",
-    //     bottom: "10%",
-    //     left: "100px",
-    // },
+
     title: {
         text: "Job Applications Overview",
         subtext: "Last 7 Days",
@@ -74,12 +69,7 @@ const graphOptions = {
 };
 
 const lineChart = {
-    // grid: {
-    //     top: "13%",
-    //     right: "1px",
-    //     bottom: "15%",
-    //     left: "100px",
-    // },
+
     title: {
         text: "Interactions",
         subtext: "Last 7 Days",
@@ -156,10 +146,10 @@ const EmployerDashboard = () => {
                 <Dashboard />
                 <Flex gap="1" mx="8" justify="center">
                     <Flex  direction="column">
-                        <Box width="800px" height="270px" >
+                        <Box width="600px" height="270px" >
                             <ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
                         </Box>
-                        <Box width="800px" height="250px" mt ="9">
+                        <Box width="600px" height="250px" mt ="9">
                             <ReactECharts option={lineChart} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
                         </Box>    
                     </Flex>
