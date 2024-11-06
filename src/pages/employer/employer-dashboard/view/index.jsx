@@ -15,12 +15,12 @@ function getPastNDays(n) {
 }
 
 const graphOptions = {
-    grid: {
-        top: "12%",
-        right: "1px",
-        bottom: "10%",
-        left: "100px",
-    },
+    // grid: {
+    //     top: "12%",
+    //     right: "1px",
+    //     bottom: "10%",
+    //     left: "100px",
+    // },
     title: {
         text: "Job Applications Overview",
         subtext: "Last 7 Days",
@@ -74,12 +74,12 @@ const graphOptions = {
 };
 
 const lineChart = {
-    grid: {
-        top: "13%",
-        right: "1px",
-        bottom: "15%",
-        left: "100px",
-    },
+    // grid: {
+    //     top: "13%",
+    //     right: "1px",
+    //     bottom: "15%",
+    //     left: "100px",
+    // },
     title: {
         text: "Interactions",
         subtext: "Last 7 Days",
@@ -109,18 +109,11 @@ const lineChart = {
 };
 
 const PieChart = {
-    // grid: {
-    //     top: '13%',
-    //     right: "1px",
-    //     bottom: "15%",
-    //     left: "10px",
-    // },
     title: {
-        text: "Trending Search",
+        text: "Trending Search of Your Company",
         subtext: new Date().toLocaleString('default', { month: 'long' }),
         left: "center",
     },
-    title: {},
     legend: {
         top: "bottom",
     },
@@ -137,7 +130,7 @@ const PieChart = {
         {
             name: "Nightingale Chart",
             type: "pie",
-            radius: [50, 250],
+            radius: [50, 200],
             center: ["50%", "50%"],
             roseType: "area",
             itemStyle: {
@@ -159,22 +152,23 @@ const PieChart = {
 
 const EmployerDashboard = () => {
     return (
-        <Flex justify="center" direction="column">
-            <Dashboard />
-            <Flex gap="1">
-                <Box width="40%" height="600px">
-                    <Box width="100%" height="270px">
-                        <ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "250px", width: "110%" }} />
-                    </Box>
-                    <Box width="100%" height="250px">
-                        <ReactECharts option={lineChart} notMerge={true} lazyUpdate={true} style={{ height: "250px", width: "110%" }} />
-                    </Box>
-                </Box>
+            <Flex justify="center" direction="column">
+                <Dashboard />
+                <Flex gap="1" mx="8" justify="center">
+                    <Flex  direction="column">
+                        <Box width="800px" height="270px" >
+                            <ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
+                        </Box>
+                        <Box width="800px" height="250px" mt ="9">
+                            <ReactECharts option={lineChart} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
+                        </Box>    
+                    </Flex>
 
-                <Box width="100%" height="600px">
-                    <ReactECharts option={PieChart} notMerge={true} lazyUpdate={true} style={{ height: "95%", width: "100%" }} />
-                </Box>
-            </Flex>
+                    <Box width="800px" height="550px" >
+                            <ReactECharts option={PieChart} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
+                    </Box>
+                    
+                </Flex>
 
             {/* <Box maxWidth="400%">
                     <RadioCards.Root defaultValue="1" columns={{ initial: "1", sm: "3" }}>
