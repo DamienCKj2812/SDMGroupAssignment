@@ -13,7 +13,7 @@ const Dashboard = () => {
     return (
         <Flex id="dashboard" justify="center">
             <Flex direction="column" gap="6" width="1200px">
-                {userRole == "admin" && (
+                {userRole == "manager" && (
                     <>
                         <Flex className="card" height="600px">
                             <ReactECharts

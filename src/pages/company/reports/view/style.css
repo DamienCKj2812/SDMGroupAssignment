@@ -1,0 +1,54 @@
+#reports .rt-SelectTrigger {
+    background: black;
+    color: white;
+    outline: 1px solid var(--gray-600);
+}
+
+#reports .rt-ScrollAreaThumb {
+    background: white;
+    cursor: pointer;
+}
+
+#reports .card {
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#reports .card h1 {
+    text-transform: uppercase;
+    font-size: 18px
+}
+
+#reports .card label {
+    font-size: 14px;
+}
+
+#reports .card .rt-TableHeader {
+    border-bottom: 1px solid var(--gray-600);
+}
+
+#reports .card .rt-TableRow {
+    color: white;
+}
+
+#reports .card .rt-TableCell {
+    border: 1px solid var(--gray-600);
+}
+
+#reports .card .export-csv {
+    background: transparent;
+    border: 1px solid white;
+    padding: 20px;
+}
+
+#reports .card .export-csv {
+    background: transparent;
+    color: white;
+}
+
+#reports .card .export-csv:hover {
+    background: white;
+    color: black;
+    transition: background 0.3s ease, color 0.3s ease; /* Add transition for background and color */
+}

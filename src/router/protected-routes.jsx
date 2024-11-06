@@ -80,4 +80,10 @@ export const protectedRoutes = [
         path: "dashboard",
         element: withLazyComponent(React.lazy(() => import("../pages/company/dashboard/view"))),
     },
+    {
+        category: "company",
+        name: "reports",
+        path: "reports",
+        element: withLazyComponent(React.lazy(() => import("../pages/company/reports/view"))),
+    },
 ];

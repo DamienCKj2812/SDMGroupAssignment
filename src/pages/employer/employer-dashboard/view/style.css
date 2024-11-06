@@ -70,12 +70,7 @@
     text-align: center;
   }
   
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 35%; /* Set a width to fit with the table */
-  }
+
   
   @media (min-width: 768px) {
     .cards {
@@ -117,11 +112,7 @@
     background-color: #2B6CB0;
   }
 
-.panel1{
-  display: flex;
-    gap: 2rem; /* Space between cards and table */
-    width: 110%;
-}
+  
   
 .table-container {
   width: 80%; /* Remaining width for the table */

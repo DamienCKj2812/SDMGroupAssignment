@@ -46,8 +46,8 @@ export const pagesOptions = {
         },
         {
             id: 2,
-            label: "Profile",
-            path: "/profile",
+            label: "Products",
+            path: "/products",
         },
     ],
     employer: [
@@ -77,6 +77,18 @@ export const pagesOptions = {
             id: 1,
             label: "Dashboard",
             path: "/dashboard",
+        },
+    ],
+    manager: [
+        {
+            id: 1,
+            label: "Dashboard",
+            path: "/dashboard",
+        },
+        {
+            id: 2,
+            label: "Reports",
+            path: "/reports",
         },
     ],
 };
