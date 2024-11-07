@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { ICompany, IJob } from "../../../../_common/interface";
 import { companyList } from "../../../../_common/data/company-list";
 import { jobList } from "../../../../_common/data/job-list";
+import { bannedEmployer } from "../data/employer-account-status-data";
 
 const EmployersProfile = () => {
     const [filterKeyword, setFilterKeyword] = useState("");
@@ -59,7 +60,7 @@ const EmployersProfile = () => {
 
                                     <Flex direction="column" gap="2" p="4">
                                         <Heading as="h1" m="0" wrap="nowrap">
-                                            {c.name}
+                                            {c.name} {bannedEmployer.includes(c.companyId) && <Text color="tomato" style={{fontWeight: "500"}}>(Banned)</Text>}
                                         </Heading>
 
                                         <Strong>{jobs.length} jobs ads</Strong>

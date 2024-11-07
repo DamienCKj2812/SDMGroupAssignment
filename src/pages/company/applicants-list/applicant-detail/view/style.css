@@ -1,0 +1,78 @@
+#applicant-detail .card {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#applicant-detail .card:hover {
+    background: var(--gray-600);
+    border-color: black;
+}
+
+#applicant-detail .card:hover p {
+    color: var(--gray-400);
+}
+
+#applicant-detail p {
+    color: var(--gray-500);
+}
+
+#applicant-detail .card2 {
+    border: 2px solid var(--gray-600);
+    border-radius: 10px;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#applicant-detail .card2:hover {
+    background: white;
+}
+
+#applicant-detail .card2:hover p,
+#applicant-detail .card2:hover strong {
+    color: black;
+}
+
+#applicant-detail .card3 {
+    border: 2px solid var(--gray-600);
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+#applicant-detail .card3:hover {
+    background: white;
+}
+
+#applicant-detail .card3:hover {
+    color: black;
+}
+
+#company-suggestion-dialog .company-card {
+    border: 2px solid var(--gray-600);
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#company-suggestion-dialog .company-card strong {
+    font-size: 15px;
+}
+
+#company-suggestion-dialog .company-card p {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+#company-suggestion-dialog .company-card:hover {
+    background: var(--gray-600);
+    border-color: black;
+}
+
+#company-suggestion-dialog .company-card.selected {
+    background: green;
+    border-color: white !important;
+    color: white !important;
+}

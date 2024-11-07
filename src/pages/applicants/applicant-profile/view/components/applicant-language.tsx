@@ -9,7 +9,7 @@ import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantLanguage = () => {
     const { handleSubmit, control, watch, reset, getValues } = useForm({
-        defaultValues: applicantSetting,
+        defaultValues: applicantSetting[0],
     });
     const [newLanguage, setNewLanguage] = useState("");
     const [openToast, setOpenToast] = useState(false);
@@ -145,7 +145,7 @@ const ApplicantLanguage = () => {
                                 <Button
                                     variant="soft"
                                     onClick={() => {
-                                        reset(applicantSetting);
+                                        reset(applicantSetting[0]);
                                     }}
                                 >
                                     Cancel

@@ -1,0 +1,24 @@
+#applicants-list th tr {
+    color: white;
+}
+
+#applicants-list .rt-TextFieldRoot {
+    background: black;
+    color: white;
+    outline: 1px solid white;
+    width: 500px;
+}
+
+#applicants-list input::placeholder {
+    color: var(--gray-600);
+}
+
+#applicants-list .rt-TableCell {
+    border: 1px solid var(--gray-600);
+    color: white;
+}
+
+#applicants-list .rt-TableRow:hover {
+    background: var(--gray-600);
+    cursor: pointer;
+}

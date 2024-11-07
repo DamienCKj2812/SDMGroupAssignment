@@ -100,5 +100,10 @@ export const pagesOptions = {
             label: "Employers Profile",
             path: "/employers-profile",
         },
+        {
+            id: 3,
+            label: "Applicants List",
+            path: "/applicants-list",
+        },
     ],
 };

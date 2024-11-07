@@ -9,7 +9,7 @@ import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantLicenseAndCertificants = () => {
     const { register, handleSubmit, control, watch, reset, getValues } = useForm({
-        defaultValues: applicantSetting,
+        defaultValues: applicantSetting[0],
     });
     const { fields, append, remove } = useFieldArray({
         control,
@@ -201,7 +201,7 @@ const ApplicantLicenseAndCertificants = () => {
                                             <Button
                                                 variant="soft"
                                                 onClick={() => {
-                                                    reset(applicantSetting), setOpenDialogIndex(null);
+                                                    reset(applicantSetting[0]), setOpenDialogIndex(null);
                                                 }}
                                             >
                                                 Cancel

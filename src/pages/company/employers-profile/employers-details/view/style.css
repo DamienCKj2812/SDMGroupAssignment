@@ -7,6 +7,16 @@
     border-radius: 17px;
 }
 
+#employer-details .rt-SegmentedControlRoot {
+    background: black;
+    color: white;
+}
+
+#employer-details .rt-SegmentedControlRoot button[data-state="on"] {
+    background: white;
+    color: black;
+}
+
 #employer-details .cursor {
     cursor: pointer;
 }

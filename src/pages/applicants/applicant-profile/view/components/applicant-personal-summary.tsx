@@ -8,7 +8,7 @@ import ToastPopover from "../../../../../_common/components/toast-popover";
 
 const ApplicantPersonalSummary = () => {
     const { register, handleSubmit, watch, reset } = useForm({
-        defaultValues: applicantSetting,
+        defaultValues: applicantSetting[0],
     });
     const [openToast, setOpenToast] = useState(false);
     const [openDialog, setOpenDialog] = useState(false);
@@ -65,7 +65,7 @@ const ApplicantPersonalSummary = () => {
                                     </Dialog.Close>
 
                                     <Dialog.Close>
-                                        <Button variant="soft" onClick={() => reset(applicantSetting)}>
+                                        <Button variant="soft" onClick={() => reset(applicantSetting[0])}>
                                             Cancel
                                         </Button>
                                     </Dialog.Close>
