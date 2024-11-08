@@ -7,6 +7,7 @@ import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import { RecoilRoot } from "recoil";
 import * as Toast from "@radix-ui/react-toast";
+import "@schedule-x/theme-default/dist/index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
