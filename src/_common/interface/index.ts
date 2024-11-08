@@ -91,3 +91,14 @@ export interface IReview {
     challenges: string;
     rating: number;
 }
+
+export interface IContract {
+    id: number;
+    companyId: number;
+    applicant: {
+        username: string;
+    };
+    status: "Under Review" | "Signed" | "Terminated";
+    lastUpdate: number;
+    contract: string[];
+}

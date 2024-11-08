@@ -1,0 +1,28 @@
+#contract-list th tr {
+    color: white;
+}
+
+#contract-list .rt-TextFieldRoot {
+    background: black;
+    color: white;
+    outline: 1px solid white;
+    width: 500px;
+}
+
+#contract-list button:disabled {
+    background: var(--gray-600);
+}
+
+#contract-list input::placeholder {
+    color: var(--gray-600);
+}
+
+#contract-list .rt-TableCell {
+    border: 1px solid var(--gray-600);
+    color: white;
+}
+
+#contract-list .rt-TableRow:hover {
+    background: var(--gray-600);
+    cursor: pointer;
+}

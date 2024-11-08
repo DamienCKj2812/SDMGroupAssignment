@@ -1,0 +1,32 @@
+#contract-details .contract-avatar {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#contract-details .contract-avatar.add-new {
+    background: var(--gray-600);
+    opacity: 0.6;
+}
+
+#contract-details .contract-tool-box {
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.8;
+}
+
+#contract-details .contract-tool-box svg {
+    color: white;
+}
+
+#contract-details .contract-tool-box svg:hover {
+    scale: 1.3;
+    transition: scale 0.2s ease-in-out;
+}
+
+#contract-details .contract-tool-box .trash:hover {
+    color: red;
+    transition: color 0.2s ease-out;
+}

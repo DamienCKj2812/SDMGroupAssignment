@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { applicantSetting } from "../../../../../_common/data/setting-list";
-import { IApplicantSetting } from "../../../../../_common/interface";
-import { Avatar, Box, Button, Dialog, Flex, Grid, Heading, Strong, Text } from "@radix-ui/themes";
+import { IApplicantSetting, ICompany } from "../../../../../_common/interface";
+import { Avatar, Box, Button, Dialog, Flex, Grid, Heading, Strong, Text, TextField } from "@radix-ui/themes";
 import "./style.css";
 import { companyList } from "../../../../../_common/data/company-list";
 
@@ -10,6 +10,8 @@ const ApplicantDetail = () => {
     const { userId } = useParams();
     const [setting, setSetting] = useState<IApplicantSetting>();
     const [suggestedCompany, setSuggestedCompany] = useState<number[]>([]);
+    const [companies, setCompanies] = useState<ICompany[]>(companyList);
+    const [filterCompanyWord, setFilterCompanyWord] = useState("");
 
     useEffect(() => {
         if (userId) {
@@ -17,7 +19,14 @@ const ApplicantDetail = () => {
         }
     }, [userId]);
 
-    console.log(suggestedCompany);
+    useEffect(() => {
+        if (!filterCompanyWord) {
+            setCompanies(companyList);
+        } else {
+            setCompanies(companyList.filter((c) => c.name.toLowerCase().includes(filterCompanyWord.toLowerCase())));
+        }
+    }, [filterCompanyWord]);
+
     return (
         <Flex justify="center" id="applicant-detail">
             <Flex direction="column" gap="5" width="1200px">
@@ -82,8 +91,15 @@ const ApplicantDetail = () => {
                                     opportunities.
                                 </Dialog.Description>
 
-                                <Grid columns="3" gap="2">
-                                    {companyList.map((c) => {
+                                <Flex align="center" mb="3" gap='3'>
+                                    <Text>Filter company name: </Text>
+                                    <TextField.Root onChange={(e) => setFilterCompanyWord(e.target.value)} />
+                                </Flex>
+
+
+                                {companies.length > 0 ? (
+                                    <Grid columns="3" gap="2">
+                                    {companies.map((c) => {
                                         return (
                                             <Flex
                                                 key={c.companyId}
@@ -111,6 +127,10 @@ const ApplicantDetail = () => {
                                         );
                                     })}
                                 </Grid>
+                                ) : (
+                                    <Flex justify="center">No company found</Flex>
+                                )}
+                                
 
                                 <Flex gap="3" mt="4" justify="end">
                                     <Dialog.Close>

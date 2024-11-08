@@ -91,19 +91,24 @@ export const pagesOptions = {
             path: "/reports",
         },
         {
-            id: 2,
+            id: 3,
             label: "Employer Ads",
             path: "/employer-ads",
         },
         {
-            id: 3,
+            id: 4,
             label: "Employers Profile",
             path: "/employers-profile",
         },
         {
-            id: 3,
+            id: 5,
             label: "Applicants List",
             path: "/applicants-list",
+        },
+        {
+            id: 6,
+            label: "Contract List",
+            path: "/contract-list",
         },
     ],
 };
