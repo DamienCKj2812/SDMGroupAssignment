@@ -2,40 +2,23 @@ import React, { useState } from "react";
 import "../style.css";
 
 import { useNavigate } from "react-router-dom";
-import { TextField, Flex, ScrollArea, SegmentedControl, Box } from "@radix-ui/themes";
+import { Container, TextField, Flex, ScrollArea, SegmentedControl, Box } from "@radix-ui/themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import LineChart from "./line-chart";
-import BarChart from "./bar-chart";
-import PieChart from "./pie-chart";
 
 const Dashboard = () => {
-    const [selectedNav, setSelectedNav] = useState("lineChart");
 
     const navigate = useNavigate();
     return (
         <div className="container">
-            <Flex>
-                <SegmentedControl.Root defaultValue="lineChart" onValueChange={setSelectedNav} style={{ width: "100%" }}>
-                    {["lineChart", "barChart", "pieChart"].map((n) => {
-                        return (
-                            <SegmentedControl.Item value={n} key={n} style={{ textTransform: "uppercase" }}>
-                                {n}
-                            </SegmentedControl.Item>
-                        );
-                    })}
-                </SegmentedControl.Root>
-            </Flex>
-
-            {selectedNav == "lineChart" && <LineChart />}
-            {selectedNav == "barChart" && <BarChart />}
-            {selectedNav == "pieChart" && <PieChart />}
+            <Box style={{ background: "var(--gray-a2)", borderRadius: "var(--radius-3)" }}>
+                <Container size="1">
+                    <img src="../src/_common/assets/business-discussion.jpg" style={{ width: "400%", height: "200px", objectFit: "cover", objectPosition: "50% 35%", transform: "scale(1.6)", borderRadius: "var(--radius-3)"}} />
+                </Container>
+            </Box>
+            
 
             <div className="content">
-                <div className="search-container">
-                    <input type="search" placeholder="Search for jobs" className="search-input" />
-                    <button className="search-button">Search</button>
-                </div>
 
                 <h1 className="title">Find the best person for your role</h1>
 
@@ -72,7 +55,7 @@ const Dashboard = () => {
                         <h2 className="title" style={{ fontSize: "1.5rem", marginTop: "2rem" }}>
                             My recent job ads
                         </h2>
-                        <TextField.Root placeholder="Search the docs…">
+                        <TextField.Root placeholder="Search for created ad..">
                             <TextField.Slot side="right">
                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
                             </TextField.Slot>

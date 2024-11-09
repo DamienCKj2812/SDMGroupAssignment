@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
-import { Container ,Box, Flex, RadioCards, Text } from "@radix-ui/themes";
+import { useNavigate } from "react-router-dom";
+import { SegmentedControl ,Container ,Box, Flex, RadioCards, Text } from "@radix-ui/themes";
 import Dashboard from "./components/dashboard";
 import ReactECharts from "echarts-for-react";
+
+import LineChart from "./components/line-chart";
+import BarChart from "./components/bar-chart";
+import PieChart from "./components/pie-chart";
 
 function getPastNDays(n) {
     const today = new Date();
@@ -38,7 +43,7 @@ const graphOptions = {
     },
     yAxis: {
         type: "value",
-        name: "Number of Applications",
+        name: "No. of Applications",
     },
     series: [
         {
@@ -98,7 +103,7 @@ const lineChart = {
     },
 };
 
-const PieChart = {
+const pieChart = {
     title: {
         text: "Trending Search of Your Company",
         subtext: new Date().toLocaleString('default', { month: 'long' }),
@@ -141,10 +146,30 @@ const PieChart = {
 };
 
 const EmployerDashboard = () => {
+    
+    const [selectedNav, setSelectedNav] = useState("Your Profile");
+    
     return (
             <Flex justify="center" direction="column">
                 <Dashboard />
-                <Flex gap="1" mx="8" justify="center">
+
+            <Flex>
+                <SegmentedControl.Root defaultValue="Your Profile" onValueChange={setSelectedNav} style={{ width: "100%" }}>
+                    {["Your Profile", "Trendings"].map((n) => {
+                        return (
+                            <SegmentedControl.Item value={n} key={n} style={{ textTransform: "uppercase" }}>
+                                {n}
+                            </SegmentedControl.Item>
+                        );
+                    })}
+                </SegmentedControl.Root>
+            </Flex>
+
+                {selectedNav == "Your Profile" && <LineChart />}
+                {selectedNav == "Trendings" && <BarChart />}
+                {selectedNav == "pieChart" && <PieChart />}
+
+                {/* <Flex gap="1" mx="8" justify="center">
                     <Flex  direction="column">
                         <Box width="600px" height="270px" >
                             <ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
@@ -155,10 +180,10 @@ const EmployerDashboard = () => {
                     </Flex>
 
                     <Box width="800px" height="550px" >
-                            <ReactECharts option={PieChart} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
+                            <ReactECharts option={pieChart} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
                     </Box>
                     
-                </Flex>
+                </Flex> */}
 
             {/* <Box maxWidth="400%">
                     <RadioCards.Root defaultValue="1" columns={{ initial: "1", sm: "3" }}>
