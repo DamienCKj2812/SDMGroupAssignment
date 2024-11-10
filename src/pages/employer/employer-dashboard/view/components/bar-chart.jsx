@@ -5,7 +5,7 @@ import { SegmentedControl ,Container ,Box, Flex, RadioCards, Text } from "@radix
 var dataMap = {};
 function dataFormatter(obj) {
   // prettier-ignore
-  var pList = ['北京', '天津', '河北', '山西', '内蒙古', '辽宁', '吉林', '黑龙江', '上海', '江苏', '浙江', '安徽', '福建', '江西', '山东', '河南', '湖北', '湖南', '广东', '广西', '海南', '重庆', '四川', '贵州', '云南', '西藏', '陕西', '甘肃', '青海', '宁夏', '新疆'];
+  var pList = ['New York', 'London', 'Tokyo', 'Paris', 'Beijing', 'Shanghai', 'Hong Kong', 'Singapore', 'Sydney', 'Los Angeles', 'Chicago', 'Berlin', 'Rome', 'Madrid', 'Amsterdam', 'Dubai', 'Kuala Lumpur', 'Bangkok', 'Mumbai', 'Seoul', 'Mexico City', 'Sao Paulo', 'Istanbul', 'Moscow', 'Rio de Janeiro', 'Buenos Aires', 'Cairo', 'Jakarta', 'Lagos', 'Bogota'];
   var temp;
   for (var year = 2002; year <= 2011; year++) {
     var max = 0;
@@ -128,7 +128,7 @@ const bar3 ={
         {
           value: '2005-01-01',
           tooltip: {
-            formatter: '{b} GDP达到一个高度'
+            formatter: '{b} GDP achieved a certain level'
           },
           symbol: 'diamond',
           symbolSize: 16
@@ -142,7 +142,7 @@ const bar3 ={
           value: '2011-01-01',
           tooltip: {
             formatter: function (params) {
-              return params.name + 'GDP达到又一个高度';
+              return params.name + 'GDP achieved a certain level';
             }
           },
           symbol: 'diamond',
@@ -156,12 +156,12 @@ const bar3 ={
       }
     },
     title: {
-      subtext: '数据来自国家统计局'
+      subtext: 'source: World Bank'
     },
     tooltip: {},
     legend: {
       left: 'right',
-      data: ['第一产业', '第二产业', '第三产业', 'GDP', '金融', '房地产'],
+      data: ['Services', 'Industry', 'Agriculture', 'Finance', 'Real Estate'],
       selected: {
         GDP: false,
         金融: false,
@@ -190,37 +190,36 @@ const bar3 ={
         type: 'category',
         axisLabel: { interval: 0 },
         data: [
-          '北京',
-          '\n天津',
-          '河北',
-          '\n山西',
-          '内蒙古',
-          '\n辽宁',
-          '吉林',
-          '\n黑龙江',
-          '上海',
-          '\n江苏',
-          '浙江',
-          '\n安徽',
-          '福建',
-          '\n江西',
-          '山东',
-          '\n河南',
-          '湖北',
-          '\n湖南',
-          '广东',
-          '\n广西',
-          '海南',
-          '\n重庆',
-          '四川',
-          '\n贵州',
-          '云南',
-          '\n西藏',
-          '陕西',
-          '\n甘肃',
-          '青海',
-          '\n宁夏',
-          '新疆'
+          'NY',
+          '\nLDN',
+          'TYO',
+          '\nPAR',
+          'BJ',
+          '\nSH',
+          'HK',
+          '\nSG',
+          'SYD',
+          '\nLA',
+          'CHI',
+          '\nBER',
+          'ROM',
+          '\nMAD',
+          'AMS',
+          '\nDB',
+          'KL',
+          '\nBKK',
+          'MUM',
+          '\nSEO',
+          'MEX',
+          '\nSAO',
+          'IST',
+          '\nMOS',
+          'RIO',
+          '\nBUE',
+          'CAI',
+          '\nJKT',
+          'LAG',
+          '\nBOG'
         ],
         splitLine: { show: false }
       }
@@ -228,18 +227,18 @@ const bar3 ={
     yAxis: [
       {
         type: 'value',
-        name: 'GDP（亿元）'
+        name: 'GDP'
       }
     ],
     series: [
       { name: 'GDP', type: 'bar' },
-      { name: '金融', type: 'bar' },
-      { name: '房地产', type: 'bar' },
-      { name: '第一产业', type: 'bar' },
-      { name: '第二产业', type: 'bar' },
-      { name: '第三产业', type: 'bar' },
+      { name: 'Finance', type: 'bar' },
+      { name: 'Real Estate', type: 'bar' },
+      { name: 'Agriculture', type: 'bar' },
+      { name: 'Industry', type: 'bar' },
+      { name: 'Services', type: 'bar' },
       {
-        name: 'GDP占比',
+        name: 'GDP share',
         type: 'pie',
         center: ['75%', '35%'],
         radius: '28%',
@@ -249,7 +248,7 @@ const bar3 ={
   },
   options: [
     {
-      title: { text: '2002全国宏观经济指标' },
+      title: { text: '2002 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2002'] },
         { data: dataMap.dataFinancial['2002'] },
@@ -259,15 +258,15 @@ const bar3 ={
         { data: dataMap.dataTI['2002'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2002sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2002sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2002sum'] }
+            { name: 'Services', value: dataMap.dataPI['2002sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2002sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2002sum'] }
           ]
         }
       ]
     },
     {
-      title: { text: '2003全国宏观经济指标' },
+      title: { text: '2003 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2003'] },
         { data: dataMap.dataFinancial['2003'] },
@@ -277,15 +276,15 @@ const bar3 ={
         { data: dataMap.dataTI['2003'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2003sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2003sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2003sum'] }
+            { name: 'Services', value: dataMap.dataPI['2003sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2003sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2003sum'] }
           ]
         }
       ]
     },
     {
-      title: { text: '2004全国宏观经济指标' },
+      title: { text: '2004 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2004'] },
         { data: dataMap.dataFinancial['2004'] },
@@ -295,15 +294,15 @@ const bar3 ={
         { data: dataMap.dataTI['2004'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2004sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2004sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2004sum'] }
+            { name: 'Services', value: dataMap.dataPI['2004sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2004sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2004sum'] }
           ]
         }
       ]
     },
     {
-      title: { text: '2005全国宏观经济指标' },
+      title: { text: '2005 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2005'] },
         { data: dataMap.dataFinancial['2005'] },
@@ -313,15 +312,15 @@ const bar3 ={
         { data: dataMap.dataTI['2005'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2005sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2005sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2005sum'] }
+            { name: 'Services', value: dataMap.dataPI['2005sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2005sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2005sum'] }
           ]
         }
       ]
     },
     {
-      title: { text: '2006全国宏观经济指标' },
+      title: { text: '2006 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2006'] },
         { data: dataMap.dataFinancial['2006'] },
@@ -331,15 +330,15 @@ const bar3 ={
         { data: dataMap.dataTI['2006'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2006sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2006sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2006sum'] }
+            { name: 'Services', value: dataMap.dataPI['2006sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2006sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2006sum'] }
           ]
         }
       ]
     },
     {
-      title: { text: '2007全国宏观经济指标' },
+      title: { text: '2007 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2007'] },
         { data: dataMap.dataFinancial['2007'] },
@@ -349,15 +348,15 @@ const bar3 ={
         { data: dataMap.dataTI['2007'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2007sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2007sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2007sum'] }
+            { name: 'Services', value: dataMap.dataPI['2007sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2007sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2007sum'] }
           ]
         }
       ]
     },
     {
-      title: { text: '2008全国宏观经济指标' },
+      title: { text: '2008 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2008'] },
         { data: dataMap.dataFinancial['2008'] },
@@ -367,15 +366,15 @@ const bar3 ={
         { data: dataMap.dataTI['2008'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2008sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2008sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2008sum'] }
+            { name: 'Services', value: dataMap.dataPI['2008sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2008sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2008sum'] }
           ]
         }
       ]
     },
     {
-      title: { text: '2009全国宏观经济指标' },
+      title: { text: '2009 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2009'] },
         { data: dataMap.dataFinancial['2009'] },
@@ -385,15 +384,15 @@ const bar3 ={
         { data: dataMap.dataTI['2009'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2009sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2009sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2009sum'] }
+            { name: 'Services', value: dataMap.dataPI['2009sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2009sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2009sum'] }
           ]
         }
       ]
     },
     {
-      title: { text: '2010全国宏观经济指标' },
+      title: { text: '2010 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2010'] },
         { data: dataMap.dataFinancial['2010'] },
@@ -403,15 +402,15 @@ const bar3 ={
         { data: dataMap.dataTI['2010'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2010sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2010sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2010sum'] }
+            { name: 'Services', value: dataMap.dataPI['2010sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2010sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2010sum'] }
           ]
         }
       ]
     },
     {
-      title: { text: '2011全国宏观经济指标' },
+      title: { text: '2011 Share of Sector' },
       series: [
         { data: dataMap.dataGDP['2011'] },
         { data: dataMap.dataFinancial['2011'] },
@@ -421,9 +420,9 @@ const bar3 ={
         { data: dataMap.dataTI['2011'] },
         {
           data: [
-            { name: '第一产业', value: dataMap.dataPI['2011sum'] },
-            { name: '第二产业', value: dataMap.dataSI['2011sum'] },
-            { name: '第三产业', value: dataMap.dataTI['2011sum'] }
+            { name: 'Industry', value: dataMap.dataPI['2011sum'] },
+            { name: 'Industry', value: dataMap.dataSI['2011sum'] },
+            { name: 'Agriculture', value: dataMap.dataTI['2011sum'] }
           ]
         }
       ]
@@ -435,19 +434,19 @@ const bar2 = {
   dataset: {
     source: [
       ['score', 'amount', 'product'],
-      [89.3, 58212, 'Matcha Latte'],
-      [57.1, 78254, 'Milk Tea'],
-      [74.4, 41032, 'Cheese Cocoa'],
-      [50.1, 12755, 'Cheese Brownie'],
-      [89.7, 20145, 'Matcha Cocoa'],
-      [68.1, 79146, 'Tea'],
-      [19.6, 91852, 'Orange Juice'],
-      [10.6, 101852, 'Lemon Juice'],
-      [32.7, 20112, 'Walnut Brownie']
+      [89.3, 108212, 'Data Scientist'],
+      [57.1, 78254, 'AI Engineer'],
+      [74.4, 31032, 'Product Manager'],
+      [50.1, 22755, 'UX Designer'],
+      [89.7, 30145, 'Software Developer'],
+      [68.1, 79146, 'Cloud Architect'],
+      [19.6, 91852, 'Cybersecurity Analyst'],
+      [10.6, 101852, 'Blockchain Developer'],
+      [32.7, 20112, 'DevOps Engineer']
     ]
   },
   grid: { containLabel: true },
-  xAxis: { name: 'amount' },
+  xAxis: { name: 'Salary' },
   yAxis: { type: 'category' },
   visualMap: {
     orient: 'horizontal',
@@ -522,7 +521,7 @@ const BarChart = () => {
             <Box width="600px" height="270px" >
                 <ReactECharts option={bar} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
             </Box>
-            <Box width="600px" height="250px" mt ="9">
+            <Box width="600px" height="250px" mt ="3">
                 <ReactECharts option={bar2} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
             </Box>    
         </Flex>
