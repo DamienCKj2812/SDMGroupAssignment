@@ -1,25 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import "../style.css";
 
 import { useNavigate } from "react-router-dom";
-import { Container, TextField, Flex, ScrollArea, SegmentedControl, Box } from "@radix-ui/themes";
+import { Container, TextField, Flex, ScrollArea, Box } from "@radix-ui/themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Dashboard = () => {
-
     const navigate = useNavigate();
     return (
         <div className="container">
-            <Box style={{ background: "var(--gray-a2)", borderRadius: "var(--radius-3)" }}>
+            <Box style={{ background: "var(--gray-a2)", borderRadius: "var(--radius-3)" }} overflow="hidden">
                 <Container size="1">
-                    <img src="../src/_common/assets/business-discussion.jpg" style={{ width: "400%", height: "200px", objectFit: "cover", objectPosition: "50% 35%", transform: "scale(1.6)", borderRadius: "var(--radius-3)"}} />
+                    <img
+                        src="../src/_common/assets/business-discussion.jpg"
+                        style={{
+                            width: "400%",
+                            height: "200px",
+                            objectFit: "cover",
+                            objectPosition: "50% 35%",
+                            transform: "scale(1.6)",
+                            borderRadius: "var(--radius-3)",
+                        }}
+                    />
                 </Container>
             </Box>
-            
 
             <div className="content">
-
                 <h1 className="title">Find the best person for your role</h1>
 
                 <Flex className="panel1" direction="column">
