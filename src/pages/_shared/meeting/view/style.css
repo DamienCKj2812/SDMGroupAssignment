@@ -1,0 +1,32 @@
+.panel .camera{
+    
+    width:50%;
+    border-radius:10px;
+    height:350px;
+    justify-content:center;
+    margin-top:100px;
+    background-image: url("src/_common/assets/gus.jpeg");
+    background-size: cover; /* Covers the entire card, filling the area */
+    background-position: center; /* Centers the image within the card */
+    background-repeat: no-repeat;
+}
+
+.camera2{
+    background-color:pink;
+    width:50%;
+    border-radius:10px;
+    height:350px;
+    justify-content:center;
+    margin-top:100px;
+    background-image: url("src/_common/assets/gus.jpeg");
+}
+
+.panel{
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.button-panel{
+    justify-content: center;
+    margin: 0 auto
+}
