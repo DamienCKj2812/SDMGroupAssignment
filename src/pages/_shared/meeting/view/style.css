@@ -1,32 +1,23 @@
-.panel .camera{
-    
-    width:50%;
-    border-radius:10px;
-    height:350px;
-    justify-content:center;
-    margin-top:100px;
-    background-image: url("src/_common/assets/gus.jpeg");
+.panel .camera {
+    border-radius: 10px;
+    height: 400px;
+    justify-content: center;
+    background-image: url("/src/_common/assets/gus.jpeg");
     background-size: cover; /* Covers the entire card, filling the area */
     background-position: center; /* Centers the image within the card */
     background-repeat: no-repeat;
 }
 
-.camera2{
-    background-color:pink;
-    width:50%;
-    border-radius:10px;
-    height:350px;
-    justify-content:center;
-    margin-top:100px;
-    background-image: url("src/_common/assets/gus.jpeg");
+.camera2 {
+    height: 400px;
+    border-radius: 10px;
+    background-image: url("https://hips.hearstapps.com/esq.h-cdn.co/assets/16/38/640x480/sd-aspect-1474665651-breaking-bad.png?resize=1200:*") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.panel{
-    margin-left:20px;
-    margin-right:20px;
-}
-
-.button-panel{
-    justify-content: center;
-    margin: 0 auto
+.panel {
+    margin-left: 20px;
+    margin-right: 20px;
 }
