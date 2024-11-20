@@ -17,7 +17,7 @@ const StaffHeader = () => {
             justify="between"
             align="center"
             id="layout-header"
-            className={`${userRole == "admin" || userRole == "manager" || userRole == "staff" ? "dark-theme-header" : ""} `}
+            className={`${userRole == "manager" || userRole == "staff" ? "dark-theme-header" : ""} `}
         >
             <Heading mr="6" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
                 Staff

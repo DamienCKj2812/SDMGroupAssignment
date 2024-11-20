@@ -52,31 +52,24 @@ export const pagesOptions = {
     ],
     employer: [
         {
-            id: 1,
-            label: "Dashboard",
-            path: "/employer/dashboard",
-        },
-        {
-            id: 2,
-            label: "Create Job AD",
-            path: "/employer/create-job-ad",
-        },
-        {
             id: 3,
-            label: "Company Profile",
-            path: "/employer/company-profile",
+            label: "Employer Ads",
+            path: "/employer-ads",
         },
         {
             id: 4,
-            label: "Meetings",
-            path: "/meeting/schedule-meeting",
+            label: "Employers Profile",
+            path: "/employers-profile",
         },
-    ],
-    admin: [
         {
-            id: 1,
-            label: "Dashboard",
-            path: "/dashboard",
+            id: 5,
+            label: "Applicants List",
+            path: "/applicants-list",
+        },
+        {
+            id: 6,
+            label: "Contract List",
+            path: "/contract-list",
         },
     ],
     manager: [
