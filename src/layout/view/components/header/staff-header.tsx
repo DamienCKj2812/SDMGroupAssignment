@@ -25,7 +25,7 @@ const StaffHeader = () => {
 
             <Flex align="center">
                 <Flex gap="5" className="page-options">
-                    {pagesOptions.employer.map((g) => {
+                    {pagesOptions.staff.map((g) => {
                         return (
                             <Box key={g.id} onClick={() => navigate(g.path)} className={`option ${location.pathname == g.path ? "selected" : ""}`}>
                                 <Text>{g.label}</Text>

@@ -58,6 +58,9 @@ function App() {
                 {/* Render the meeting route for all parties */}
                 {currentUser && getProtectedRoutes("meeting")}
 
+                {/* Render the meeting route for all parties */}
+                {currentUser && getProtectedRoutes("payment")}
+
                 {/* Catch-all route for non-existent paths */}
                 <Route path="*" element={getRedirectElement()} />
             </Route>

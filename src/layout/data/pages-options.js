@@ -52,6 +52,28 @@ export const pagesOptions = {
     ],
     employer: [
         {
+            id: 1,
+            label: "Dashboard",
+            path: "/employer/dashboard",
+        },
+        {
+            id: 2,
+            label: "Create Job AD",
+            path: "/employer/create-job-ad",
+        },
+        {
+            id: 3,
+            label: "Company Profile",
+            path: "/employer/company-profile",
+        },
+        {
+            id: 4,
+            label: "Meetings",
+            path: "/meeting/schedule-meeting",
+        },
+    ],
+    staff: [
+        {
             id: 3,
             label: "Employer Ads",
             path: "/employer-ads",
