@@ -5,7 +5,7 @@ import { userRoleState } from "../../../../_common/state";
 import EmplolyerProduct from "./component/employer-product-page";
 import ApplicanntProfile from "./component/applicant-profile-page";
 
-const Home = () => {
+const Profile = () => {
     const [userRole] = useRecoilState(userRoleState);
 
     if (userRole == "employer") {
@@ -17,4 +17,4 @@ const Home = () => {
     }
 };
 
-export default Home;
+export default Profile;
