@@ -8,7 +8,7 @@ const CompanyProfile = () => {
     return (
         <Flex id="company-profile" justify="center">
             <Flex direction="column" gap="7" className="form-container">
-                <Heading as="h1">Company Profile</Heading>
+                <Heading as="h1">Create New Job Add</Heading>
 
                 <Box>
                     <Strong>Your details</Strong>
