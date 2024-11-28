@@ -14,7 +14,7 @@ const ApplicanntProfile = () => {
                             {" "}
                             {/* Use space-between to separate items */}
                             <Flex direction="column" className="words">
-                                <Box className="header">
+                                <Box className="headerName">
                                     <h1>Be seen with a Applicant Finder profile</h1>
                                 </Box>
                                 <Box className="text1">

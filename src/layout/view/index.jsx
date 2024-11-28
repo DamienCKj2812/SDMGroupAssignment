@@ -6,7 +6,7 @@ import LayoutHeader from "./components/header";
 import { useRecoilState } from "recoil";
 import { currentLoggedInUserState, userRoleState } from "../../_common/state";
 
-const pathWithNoMargin = ["/home", "/login", "/register", "/employer/company-profile", "/applicant/job-search"];
+const pathWithNoMargin = ["/home", "/login", "/register", "/employer/company-profile", "/applicant/job-search", "/meeting/schedule-meeting"];
 
 const MainLayout = () => {
     const navigate = useNavigate();

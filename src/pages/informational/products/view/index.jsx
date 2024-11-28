@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { useRecoilState } from "recoil";
+import { userRoleState } from "../../../../_common/state";
 
-const Products = () => {
-  return (
-    <div>Products</div>
-  )
-}
+import EmplolyerProduct from "./component/employer-product-page";
+import ApplicanntProfile from "./component/applicant-profile-page";
 
-export default Products
+const Home = () => {
+    const [userRole] = useRecoilState(userRoleState);
+
+    if (userRole == "employer") {
+        return <EmplolyerProduct />;
+    }
+
+    if (userRole == "applicant") {
+        return <ApplicanntProfile />;
+    }
+};
+
+export default Home;
