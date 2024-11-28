@@ -17,7 +17,7 @@ const StaffHeader = () => {
             justify="between"
             align="center"
             id="layout-header"
-            className={`${userRole == "admin" || userRole == "manager" || userRole == "staff" ? "dark-theme-header" : ""} `}
+            className={`${userRole == "manager" || userRole == "staff" ? "dark-theme-header" : ""} `}
         >
             <Heading mr="6" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
                 Staff
@@ -25,7 +25,7 @@ const StaffHeader = () => {
 
             <Flex align="center">
                 <Flex gap="5" className="page-options">
-                    {pagesOptions.employer.map((g) => {
+                    {pagesOptions.staff.map((g) => {
                         return (
                             <Box key={g.id} onClick={() => navigate(g.path)} className={`option ${location.pathname == g.path ? "selected" : ""}`}>
                                 <Text>{g.label}</Text>

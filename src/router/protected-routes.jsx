@@ -140,4 +140,16 @@ export const protectedRoutes = [
         path: "create-contract",
         element: withLazyComponent(React.lazy(() => import("../pages/company/contract/create-contract/view"))),
     },
+    {
+        category: "payment",
+        name: "payment-gateway",
+        path: "/payment-gateway",
+        element: withLazyComponent(React.lazy(() => import("../pages/_shared/payment-gateway/view"))),
+    },
+    {
+        category: "contract",
+        name: "sign-contract",
+        path: "/sign-contract",
+        element: withLazyComponent(React.lazy(() => import("../pages/_shared/sign-contract/view"))),
+    },
 ];

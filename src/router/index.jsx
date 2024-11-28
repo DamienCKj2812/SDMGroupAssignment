@@ -10,11 +10,10 @@ function getPublicRoutes() {
 }
 
 function getProtectedRoutes(type) {
-    console.log(type);
     return protectedRoutes
         .filter((route) => {
             // Check if the route is in the "company" category for admin, manager, or staff
-            if ((type === "admin" || type === "manager" || type === "staff") && route.category === "company") {
+            if ((type === "manager" || type === "staff") && route.category === "company") {
                 return true;
             }
             // Check if the route's category matches the `type`

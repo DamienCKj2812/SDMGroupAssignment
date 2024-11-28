@@ -20,6 +20,8 @@ const CompanyLogin = () => {
 
     const onSubmit = (data) => {
         const user = companyUser.find((u) => u.emailAddress === data.email);
+
+        console.log(data)
         if (user) {
             if (user.password === data.password) {
                 setUser(user);

@@ -35,11 +35,4 @@ export const companyUser: IUser[] = [
         password: "test123",
         role: "manager",
     },
-    {
-        userId: 69,
-        username: "admin",
-        emailAddress: "admin@test.com",
-        password: "test123",
-        role: "admin",
-    },
 ];

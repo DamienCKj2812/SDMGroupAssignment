@@ -37,6 +37,11 @@ export const pagesOptions = {
             label: "Applied Jobs",
             path: "/applied-jobs/jobs",
         },
+        {
+            id: 6,
+            label: "Contract",
+            path: "/sign-contract",
+        },
     ],
     employerGuest: [
         {
@@ -71,12 +76,32 @@ export const pagesOptions = {
             label: "Meetings",
             path: "/meeting/schedule-meeting",
         },
-    ],
-    admin: [
         {
-            id: 1,
-            label: "Dashboard",
-            path: "/dashboard",
+            id: 5,
+            label: "Contract",
+            path: "/sign-contract",
+        },
+    ],
+    staff: [
+        {
+            id: 3,
+            label: "Employer Ads",
+            path: "/employer-ads",
+        },
+        {
+            id: 4,
+            label: "Employers Profile",
+            path: "/employers-profile",
+        },
+        {
+            id: 5,
+            label: "Applicants List",
+            path: "/applicants-list",
+        },
+        {
+            id: 6,
+            label: "Contract List",
+            path: "/contract-list",
         },
     ],
     manager: [

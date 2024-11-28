@@ -7,17 +7,20 @@ import EmployerHeader from "./employer-header";
 import ApplicantHeader from "./applicant-header";
 import StaffHeader from "./staff-header";
 import ManagerHeader from "./manager-header";
-import AdminHeader from "./admin-header";
+import { useLocation } from "react-router-dom";
 
+const locationNoHeader = ["/payment-gateway"];
 const LayoutHeader = () => {
     const [currentUserRole] = useRecoilState(userRoleState);
     const [currentUser] = useRecoilState(currentLoggedInUserState);
+    const location = useLocation();
 
+    if (locationNoHeader.includes(location.pathname)) return null;
+    
     if (currentUser) {
         if (currentUserRole == "employer") return <EmployerHeader />;
         if (currentUserRole == "applicant") return <ApplicantHeader />;
         if (currentUserRole == "staff") return <StaffHeader />;
-        if (currentUserRole == "admin") return <AdminHeader />;
         if (currentUserRole == "manager") return <ManagerHeader />;
     }
 

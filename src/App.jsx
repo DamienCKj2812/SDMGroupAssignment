@@ -33,10 +33,10 @@ function App() {
             if (userRole === "applicant") {
                 return <Navigate to="applicant/job-search" replace />;
             }
-            if (userRole === "admin") {
-                return <Navigate to="/dashboard" replace />;
+            if (userRole === "staff") {
+                return <Navigate to="/employer-ads" replace />;
             }
-            if (userRole === "admin" || userRole === "manager") {
+            if (userRole === "manager") {
                 return <Navigate to="/dashboard" replace />;
             }
         }
@@ -57,6 +57,12 @@ function App() {
 
                 {/* Render the meeting route for all parties */}
                 {currentUser && getProtectedRoutes("meeting")}
+
+                {/* Render the contract route for all parties */}
+                {currentUser && getProtectedRoutes("contract")}
+
+                {/* Render the payment route for all parties */}
+                {currentUser && getProtectedRoutes("payment")}
 
                 {/* Catch-all route for non-existent paths */}
                 <Route path="*" element={getRedirectElement()} />

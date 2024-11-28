@@ -6,7 +6,8 @@ import LayoutHeader from "./components/header";
 import { useRecoilState } from "recoil";
 import { currentLoggedInUserState, userRoleState } from "../../_common/state";
 
-const pathWithNoMargin = ["/home", "/login", "/register", "/employer/company-profile", "/applicant/job-search", "/meeting/schedule-meeting"];
+const pathWithNoMargin = ["/home", "/login", "/register", "/employer/company-profile", "/applicant/job-search"];
+const locationNoHeader = ["/payment-gateway"];
 
 const MainLayout = () => {
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ const MainLayout = () => {
                 <LayoutHeader />
             </Box>
             <ScrollArea
-                style={{ height: "calc(100vh - 60px)" }}
+                style={{ height: `${locationNoHeader.includes(location.pathname) ? "100vh" : "calc(100vh - 60px)"}` }}
                 id="layout-scroll-area"
                 className={`${userRole == "admin" || userRole == "manager" || userRole == "staff" ? "dark-theme-layout" : ""} `}
             >
