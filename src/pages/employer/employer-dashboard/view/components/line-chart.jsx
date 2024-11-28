@@ -140,22 +140,23 @@ const pieChart = {
 
 const LineChart = () => {
     return <div> 
-    <Flex gap="1" mt="9" mx="8" justify="center">
-        
-        <Flex  direction="column">
-            <Box width="600px" height="270px" >
-                <ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
-            </Box>
-            <Box width="600px" height="250px" mt ="9">
-                <ReactECharts option={lineChart} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
-            </Box>    
-        </Flex>
+        <Flex gap="1" mt="9" mx="8" justify="center">
+            
+            <Flex  direction="column">
+                <Box width="600px" height="270px" >
+                    <ReactECharts option={graphOptions} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
+                </Box>
+                <Box width="600px" height="250px" mt ="9">
+                    <ReactECharts option={lineChart} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
+                </Box>    
+            </Flex>
 
-        <Box width="800px" height="550px" >
-                <ReactECharts option={pieChart} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
-        </Box>
-        
-    </Flex></div>;
+            <Box width="800px" height="550px" >
+                    <ReactECharts option={pieChart} notMerge={true} lazyUpdate={true} style={{ height: "100%", width: "100%" }} />
+            </Box>
+            
+        </Flex>
+    </div>;
    
 };
 
