@@ -43,7 +43,6 @@ const ApplicantGuestHeader = () => {
                     className="text-link"
                     onClick={() => {
                         setCurrentRole("employer");
-                        navigate("/");
                     }}
                 >
                     Employer site

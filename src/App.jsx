@@ -58,10 +58,7 @@ function App() {
                 {/* Render the meeting route for all parties */}
                 {currentUser && getProtectedRoutes("meeting")}
 
-                {/* Render the contract route for all parties */}
-                {currentUser && getProtectedRoutes("contract")}
-
-                {/* Render the payment route for all parties */}
+                {/* Render the meeting route for all parties */}
                 {currentUser && getProtectedRoutes("payment")}
 
                 {/* Catch-all route for non-existent paths */}
