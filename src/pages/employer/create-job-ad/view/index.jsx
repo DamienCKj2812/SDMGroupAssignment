@@ -26,8 +26,9 @@ const CreateJobAd = () => {
                     <Flex justify="center" width="100%">
                         <Flex direction="column" gap="4" className="form-container">
                             <Heading as="h1">Create a New Job Ad</Heading>
-                            <Strong>Job details</Strong>
+
                             <Box>
+                                <Strong>Job details</Strong>
                                 <Flex direction="column" className="form-details-container" gap="5">
                                     <Flex gap="1" direction="column">
                                         <Text as="label">Position name</Text>
@@ -42,92 +43,7 @@ const CreateJobAd = () => {
                                         <Text as="label">Essential Responsibilities and Deliverables (Optional)</Text>
                                         <TextArea size="2" placeholder="Tell the people what the job is doing..." />
                                     </Flex>
-                                    <Flex gap="4" direction="column">
-                                        <Strong>Languages</Strong>
-                                        <Controller
-                                            name="skills"
-                                            control={control}
-                                            render={({ field }) => {
-                                                return (
-                                                    <>
-                                                        <Flex direction="column" gap="2">
-                                                        <Text as ="label">Add More Languages</Text>
-                                                            <Flex gap="3">
-                                                                <TextField.Root placeholder="Add a new language" onChange={(e) => setNewSkill(e.target.value)} value={newSkill} >
-                                                                    <TextField.Slot side="left">
-                                                                        <FontAwesomeIcon icon={faLanguage} />
-                                                                    </TextField.Slot>
-                                                                </TextField.Root>
-                                                                    
-                                                                <Button
-                                                                    onClick={() => {
-                                                                        if (newSkill) {
-                                                                            field.onChange([...field.value, newSkill]);
-                                                                            setNewSkill("");
-                                                                        }
-                                                                    }}
-                                                                >
-                                                                    Add
-                                                                </Button>
-                                                            </Flex>
-                                                            <Text as="label">Click add or press enter</Text>
-                                                        </Flex>
 
-                                                        <Flex direction="column" gap="2">
-                                                        <Text as ="label">Suggested Languages</Text>
-                                                            <Flex gap="4" wrap="wrap">
-                                                                {["Mandarin Chinese", "Spanish", "Hindi", "French", "Arabic"]
-                                                                    .filter((s) => !field.value.includes(s))
-                                                                    .slice(0, 6)
-                                                                    .map((s) => {
-                                                                        return (
-                                                                            <Flex
-                                                                                key={s}
-                                                                                align="center"
-                                                                                gap="4"
-                                                                                onClick={() => field.onChange([...field.value, s])}
-                                                                                className="suggested-skill-container"
-                                                                            >
-                                                                                <Text as="p" m="0">
-                                                                                    {s}
-                                                                                </Text>
-                                                                                <FontAwesomeIcon icon={faPlus} />
-                                                                            </Flex>
-                                                                        );
-                                                                    })}
-                                                            </Flex>
-                                                        </Flex>
-
-                                                        <Flex direction="column" gap="2">
-                                                            <Text as ="label">Added Languages</Text>
-                                                            <Flex gap="2" wrap="wrap">
-                                                                {["English"]
-                                                                    .filter((s) => !field.value.includes(s))
-                                                                    .slice(0, 6)
-                                                                    .map((s) => {
-                                                                    return (
-                                                                        <Flex
-                                                                            key={s}
-                                                                            align="center"
-                                                                            gap="4"
-                                                                            onClick={() => field.onChange(field.value.filter((f) => f != s))}
-                                                                            className="added-skill-container"
-                                                                        >
-                                                                            <Text as="p" m="0">
-                                                                                {s}
-                                                                            </Text>
-                                                                            <FontAwesomeIcon icon={faXmark} />
-                                                                        </Flex>
-                                                                    );
-                                                                })}
-                                                            </Flex>
-                                                        </Flex>
-                                                    </>
-                                                );
-                                            }}
-                                        />
-                                        
-                                    </Flex>
                                     <Flex gap="1" direction="column">
                                         <Text as="label">Salary</Text>
                                         <TextField.Root placeholder="How much you pay for a month" />
@@ -136,7 +52,7 @@ const CreateJobAd = () => {
                                         <Text as="label">Perks and benefits</Text>
                                         <TextField.Root placeholder="What do you provide?" size="2">
                                             <TextField.Slot side="left">
-                                                <FontAwesomeIcon icon= {faGifts} />
+                                                <FontAwesomeIcon icon={faGifts} />
                                             </TextField.Slot>
                                         </TextField.Root>
                                     </Flex>
@@ -162,6 +78,96 @@ const CreateJobAd = () => {
                                 </Flex>
                             </Box>
 
+                            <Flex gap="4" direction="column">
+                                <Strong>Languages</Strong>
+                                <Controller
+                                    name="skills"
+                                    control={control}
+                                    render={({ field }) => {
+                                        return (
+                                            <Flex direction="column" gap="4" mx="4">
+                                                <Flex direction="column" gap="2">
+                                                    <Text as="label">Add More Languages</Text>
+                                                    <Flex gap="3">
+                                                        <TextField.Root
+                                                            placeholder="Add a new language"
+                                                            onChange={(e) => setNewSkill(e.target.value)}
+                                                            value={newSkill}
+                                                        >
+                                                            <TextField.Slot side="left">
+                                                                <FontAwesomeIcon icon={faLanguage} />
+                                                            </TextField.Slot>
+                                                        </TextField.Root>
+
+                                                        <Button
+                                                            onClick={() => {
+                                                                if (newSkill) {
+                                                                    field.onChange([...field.value, newSkill]);
+                                                                    setNewSkill("");
+                                                                }
+                                                            }}
+                                                        >
+                                                            Add
+                                                        </Button>
+                                                    </Flex>
+                                                    <Text as="label">Click add or press enter</Text>
+                                                </Flex>
+
+                                                <Flex direction="column" gap="2">
+                                                    <Text as="label">Suggested Languages</Text>
+                                                    <Flex gap="4" wrap="wrap">
+                                                        {["Mandarin Chinese", "Spanish", "Hindi", "French", "Arabic"]
+                                                            .filter((s) => !field.value.includes(s))
+                                                            .slice(0, 6)
+                                                            .map((s) => {
+                                                                return (
+                                                                    <Flex
+                                                                        key={s}
+                                                                        align="center"
+                                                                        gap="4"
+                                                                        onClick={() => field.onChange([...field.value, s])}
+                                                                        className="suggested-skill-container"
+                                                                    >
+                                                                        <Text as="p" m="0">
+                                                                            {s}
+                                                                        </Text>
+                                                                        <FontAwesomeIcon icon={faPlus} />
+                                                                    </Flex>
+                                                                );
+                                                            })}
+                                                    </Flex>
+                                                </Flex>
+
+                                                <Flex direction="column" gap="2">
+                                                    <Text as="label">Added Languages</Text>
+                                                    <Flex gap="2" wrap="wrap">
+                                                        {["English"]
+                                                            .filter((s) => !field.value.includes(s))
+                                                            .slice(0, 6)
+                                                            .map((s) => {
+                                                                return (
+                                                                    <Flex
+                                                                        key={s}
+                                                                        align="center"
+                                                                        gap="4"
+                                                                        onClick={() => field.onChange(field.value.filter((f) => f != s))}
+                                                                        className="added-skill-container"
+                                                                    >
+                                                                        <Text as="p" m="0">
+                                                                            {s}
+                                                                        </Text>
+                                                                        <FontAwesomeIcon icon={faXmark} />
+                                                                    </Flex>
+                                                                );
+                                                            })}
+                                                    </Flex>
+                                                </Flex>
+                                            </Flex>
+                                        );
+                                    }}
+                                />
+                            </Flex>
+
                             <Box mt="3">
                                 <Strong>Job requirements</Strong>
 
@@ -170,35 +176,41 @@ const CreateJobAd = () => {
                                         <Text as="label">Skills equired</Text>
                                         <TextArea size="2" placeholder="The skills you are looking for..." />
                                     </Flex>
-
-                                    <Flex gap="1" direction="column">
-                                        <Text as="label" size="3">
-                                            <Strong>Employer Questions</Strong>
-                                        </Text>
-                                        <Text as="p" m="0">
-                                            List the questions you want to ask from the applicants.
-                                        </Text>
-                                        <TextArea size="2" placeholder="What questions do you want to ask..." />
-                                    </Flex>
                                 </Flex>
                             </Box>
 
-                            <Flex mx = "5" direction="column" gap="5" wrap="wrap">
+                            <Flex gap="1" direction="column">
+                                <Text as="label" size="3">
+                                    <Strong>Employer Questions</Strong>
+                                </Text>
+                                <Box mx="4" mt="3">
+                                    <Text as="p" m="0" mb="2">
+                                        List the questions you want to ask from the applicants.
+                                    </Text>
+                                    <TextArea size="2" placeholder="What questions do you want to ask..." />
+                                </Box>
+                            </Flex>
+
+                            <Flex direction="column" gap="5" wrap="wrap">
                                 <Controller
                                     name="skills"
                                     control={control}
                                     render={({ field }) => {
                                         return (
-                                            <>
+                                            <Flex direction="column" gap="4" mx="4">
                                                 <Flex direction="column" gap="2">
                                                     <Strong>Add skill tag</Strong>
                                                     <Flex gap="3">
-                                                        <TextField.Root placeholder="Add a new skill" onChange={(e) => setNewSkill(e.target.value)} value={newSkill} >
+                                                        <TextField.Root
+                                                            placeholder="Add a new skill"
+                                                            onChange={(e) => setNewSkill(e.target.value)}
+                                                            value={newSkill}
+                                                        >
                                                             <TextField.Slot side="left">
                                                                 <FontAwesomeIcon icon={faTag} />
                                                             </TextField.Slot>
                                                         </TextField.Root>
-                                                            
+
                                                         <Button
                                                             onClick={() => {
                                                                 if (newSkill) {
@@ -259,17 +271,16 @@ const CreateJobAd = () => {
                                                         })}
                                                     </Flex>
                                                 </Flex>
-                                            </>
+                                            </Flex>
                                         );
                                     }}
                                 />
                             </Flex>
 
-                            <Flex mt = "5" gap="4">
+                            <Flex mt="5" gap="4">
                                 <Button variant="outline">Save as Draft</Button>
+                                <Button onClick={() => navigate("../../employer/dashboard")}>Publish New Job</Button>
                             </Flex>
-
-                            <Button onClick={() => navigate("../../employer/dashboard")}>Publish New Job</Button>
                         </Flex>
                     </Flex>
                 </Box>
