@@ -1,0 +1,7 @@
+#addcontract .contract-tool-box{
+   height: 100%;
+    width: 100%;
+  
+    opacity: 0.8; 
+    border-radius:10px;
+}
