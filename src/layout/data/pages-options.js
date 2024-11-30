@@ -42,6 +42,11 @@ export const pagesOptions = {
             label: "Contract",
             path: "/contract",
         },
+        {
+            id: 7,
+            label: "Contract Status",
+            path: "/contract-status",
+        },
     ],
     employerGuest: [
         {
@@ -80,6 +85,11 @@ export const pagesOptions = {
             id: 5,
             label: "Contract",
             path: "/contract",
+        },
+        {
+            id: 6,
+            label: "Contract Status",
+            path: "/contract-status",
         },
     ],
     staff: [
