@@ -32,7 +32,6 @@ const ManageStaff = () => {
                                 <Table.ColumnHeaderCell>User ID</Table.ColumnHeaderCell>
                                 <Table.ColumnHeaderCell>Username</Table.ColumnHeaderCell>
                                 <Table.ColumnHeaderCell>Email Address</Table.ColumnHeaderCell>
-                                <Table.ColumnHeaderCell>Status</Table.ColumnHeaderCell>
                             </Table.Row>
                         </Table.Header>
 
@@ -43,16 +42,6 @@ const ManageStaff = () => {
                                         <Table.Cell>{m.userId}</Table.Cell>
                                         <Table.Cell>{m.username}</Table.Cell>
                                         <Table.Cell>{m.emailAddress}</Table.Cell>
-                                        <Table.Cell>
-                                            <Flex gap="4">
-                                                <FreezeUserDialog user={m.username}>
-                                                    <Button>Freeze</Button>
-                                                </FreezeUserDialog>
-                                                <RemoveUserDialog user={m.username}>
-                                                    <Button color="ruby">Remove</Button>
-                                                </RemoveUserDialog>
-                                            </Flex>
-                                        </Table.Cell>
                                     </Table.Row>
                                 );
                             })}

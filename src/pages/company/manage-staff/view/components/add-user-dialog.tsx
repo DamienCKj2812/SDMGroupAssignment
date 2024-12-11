@@ -86,11 +86,13 @@ const AddUserDialog = ({ children }: { children: React.ReactNode }) => {
                                     rules={{ required: "Role is required" }}
                                     render={({ field }) => (
                                         <Select.Root defaultValue="staff" {...register("role", { required: "Role is required" })}>
-                                            <Select.Trigger  style={{ width: "100%" }} />
+                                            <Select.Trigger style={{ width: "100%" }} />
                                             <Select.Content>
                                                 <Select.Group>
                                                     <Select.Item value="staff">Staff</Select.Item>
-                                                    <Select.Item value="manager">Manager</Select.Item>
+                                                    <Select.Item value="manager" disabled>
+                                                        Manager
+                                                    </Select.Item>
                                                 </Select.Group>
                                             </Select.Content>
                                         </Select.Root>
