@@ -1,0 +1,18 @@
+#manage-staff th,
+#manage-staff td {
+    color: white;
+    width: 400px;
+}
+
+#manage-staff th:last-child,
+#manage-staff td:last-child {
+    width: 200px;
+}
+
+#manage-staff thead th {
+    border: 1px solid white;
+}
+
+#manage-staff tbody td {
+    border: 1px solid gray;
+}

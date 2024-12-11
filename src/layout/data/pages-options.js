@@ -145,5 +145,10 @@ export const pagesOptions = {
             label: "Contract List",
             path: "/contract-list",
         },
+        {
+            id: 7,
+            label: "Manage Staff",
+            path: "/manage-staff",
+        },
     ],
 };
