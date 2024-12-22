@@ -12,7 +12,7 @@ Currently, two official plugins are available:
 
 # How to run the project
 ### Pre-requisites
-Required to install the nodejs
+Required to install the nodejs, and make sure is at run on SDMGroupAssignment Folder
 
 ###  By pass Execution Policy for this folder only
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
